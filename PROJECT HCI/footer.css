@@ -21,10 +21,9 @@
 
 .footer_container{
     display: block;
-    overflow: scroll;
-    max-width: 1080px;
+    width: 1500px;
     margin:auto;
-    height: fit-content;
+
 }
 
 .row{

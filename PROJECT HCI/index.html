@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wander Bros.</title>
-
     <link rel="stylesheet" href="style.css">
-
-    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
-        <h5><a href="#" class="logo"><img src="images/logo.png">Wander</a></h5>
+        <h1><a href="#" class="logo"><img src="images/logo.png" alt="Wander Bros. Logo">Wander</a></h1>
         <nav class="nav">
             <a href="#">Home</a>
             <a href="#">About Us</a>
@@ -20,54 +18,120 @@
             <button class="btnLogin-popup">Login</button>
         </nav>
     </header>
-
-          <div class="container_tagline">
-            <p>Easy - Efficient - Affordable</p>
-            <h1>Your dream vacation starts here.<br><span class="outline_text"> Wander </span> more, worry less</h1>
-          </div>
     
-          <div class="booking_search" id="book">
-            <div class="grey_container">
-                <div class="pub-tours__container">
-                  <div class="tours">
-                    <h2><i class="ri-earth-fill" id="icons"></i>Tours </h2>
-                  </div>
-                  <form class="pub-tours__form">
-                    <div class="pub-tours__form-group">
-                      <span><i class="ri-calendar-2-line" id="icons"></i></span> <label for="tour-date">Date:</label>
-                      <br>
-                          <input type="date" id="tour-date" name="tour-date">
+    <div class="main-content">
+        <section class="content">
+            <div class="container">
+                <div class="container_tagline">
+                    <p>Easy - Efficient - Affordable</p>
+                    <h2>Your dream vacation starts here.<br><span class="outline_text"> Wander </span> more, worry less</h2>
+                </div>
+                
+                <div class="booking_search" id="book">
+                    <div class="grey_container">
+                        <div class="pub-tours__container">
+                            <div class="tours">
+                                <h2><i class="ri-earth-fill" id="icons"></i>Tours<br></h2>
+                            </div>
+                            <form class="pub-tours__form">
+                                <div class="pub-tours__form-group">
+                                    <span><i class="ri-calendar-2-line" id="icons"></i></span><label for="tour-date">Date:</label><br>
+                                    <input type="date" id="tour-date" name="tour-date">
+                                </div>
+                                <div class="pub-tours__form-group">
+                                    <span><i class="ri-time-line" id="icons"></i></span><label for="tour-time">Time:</label><br>
+                                    <input type="time" id="tour-time" name="tour-time">
+                                </div>
+                                <div class="pub-tours__form-group">
+                                    <span><i class="ri-keyboard-line" id="icons"></i></span><label for="tour-type">Tour:</label><br>
+                                    <select id="tour-type" name="tour-type">
+                                        <option value="">Select...</option>
+                                        <option value="option1">Dinner with a View Package</option>
+                                        <option value="option2">Wine Tasting in Barcelona</option>
+                                        <option value="option3">Sagrada Famillia Tour</option>
+                                        <option value="option4">Leaning Tower of Pisa Tour</option>
+                                        <option value="option5">Church and Chapel Tour</option>
+                                    </select>
+                                </div>
+                                <div class="pub-tours__form-group">
+                                    <span><i class="ri-bus-2-line" id="icons"></i></span><label for="transportation">Transportation:</label><br>
+                                    <select id="transportation" name="transportation">
+                                        <option value="">Select...</option>
+                                        <option value="option1">Bus</option>
+                                        <option value="option2">Minivan</option>
+                                        <option value="option3">Bike</option>
+                                        <option value="option4">Luxury Experience</option>
+                                    </select>
+                                </div>
+                                
+                              </form>
+                        </div>
                     </div>
-                    <div class="pub-tours__form-group">
-                      <span><i class="ri-time-line" id="icons"></i></span> <label for="tour-time">Time:</label>
-                      <br>
-                        <input type="time" id="tour-time" name="tour-time">
-                    </div>
-                    <div class="pub-tours__form-group">
-                      <span><i class="ri-keyboard-line" id="icons"></i></span> <label for="tour-type">Tour:</label>
-                      <br>
-                        <select id="tour-type" name="tour-type">
-                          <option value="">Select...</option>
-                          <option value="option1">Dinner with a View Package</option>
-                          <option value="option2">Wine Tasting in Barcelona</option>
-                          <option value="option2">Sagrada Famillia Tour</option>
-                          <option value="option2">Leaning Tower of Pisa Tour</option>
-                          <option value="option2">Church and Chapel Tour</option>
-                        </select>
-                    </div>
-                    <div class="pub-tours__form-group">
-                      <span><i class="ri-bus-2-line" id="icons"></i></span> <label for="transportation">Transportation:</label>
-                      <br>
-                        <select id="transportation" name="transportation">
-                          <option value="">Select...</option>
-                          <option value="option1">Bus</option>
-                          <option value="option2">Minivan</option>
-                          <option value="option3">Bike</option>
-                          <option value="option4">Luxury Experience</option>
-                    </div>
-                  </form>
                 </div>
             </div>
-          </div>        
+        </section>
+    </div>
+
+    <footer class="footer fade-in">
+        <div class="footer_container">
+            <div class="footer_logo">
+                <a href="#" class="foot_logo"><img src="logo.png" alt="Wander Bros. Logo"></a>
+                <br>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="footer-col">
+                    <br>
+                    <h4>Wander</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Tour Packages</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <br>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Transportation Services</a></li>
+                        <li><a href="#">Special Interest Tours</a></li>
+                        <li><a href="#">Eco-friendly Tours</a></li>
+                        <li><a href="#">Guided Tours</a></li>
+                        <li><a href="#">Passport Assistance</a></li>
+                        <li><a href="#">Visa Assistance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <br>
+                    <h4>Reach Us!</h4>
+                    <ul>
+                        <li><a href="#"><i class='bx bxs-map' id="icons"></i> Bonifacio St. Davao City, Philippines</a></li>
+                        <li><a href="#"><i class='bx bx-phone-call' id="icons"></i> +639958536560</a></li>
+                        <li><a href="#"><i class='bx bx-envelope' id="icons"></i> wander_bros@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <br>
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="copy">
+                <hr>
+                <br>
+                <center>
+                    <p> Copyright 2024 - Wander Travel & Tours. All rights reserved.</p>
+                </center>
+                <br>
+                <hr>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
