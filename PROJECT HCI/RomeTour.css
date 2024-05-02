@@ -1,0 +1,429 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior:smooth ;
+  font-family: 'Poppins', sans-serif;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+section{
+  min-height: 10vh;
+  padding: 10rem 9% 2rem;
+}
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.253);
+}
+.header img {
+  width: 60px;
+  height: auto;
+}
+.logo{
+  font-weight: 600;
+  cursor: default;
+  margin-right: auto;
+}
+.navbar a{
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin-right: 3rem;
+  transition: .3s;
+}
+.navbar {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+select[name="Eng"] {
+  font-size: 1.3rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+}
+
+.btn {
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+}
+.booknow-button {
+
+  background-color: #00B3FF; 
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 30px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.signup-button {
+background-color: #00B3FF;
+border: none;
+color: rgb(0, 0, 0);
+padding: 10px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 1.3rem;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 20px;
+}
+/* ANDITO LAHAT*/
+.back-button {
+  background-color: rgb(255, 255, 255); 
+  padding: 10px 32px;
+  text-decoration: none; 
+  color: rgb(0, 0, 0);
+  margin-left: 130px;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0px 50px 0px 80px ;
+  margin-right: 80px;
+}
+#calendar {
+  width: 200px;
+  height: 200px;
+}
+input[type="date"],
+input[type="time"] {
+  padding: 9px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+.time-title{
+  margin-top: 20px;
+  margin-bottom: 1px;
+}
+#timeInput {
+  padding: 8px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  border: 1px solid #ccc; /* Add border style */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  margin-right: 150px; /* Add margin */
+  margin-bottom: 0.5px;
+}
+.tour{
+  width: 490px;
+  height: 600px;
+  border-radius: 15px;
+}
+.tour-1{
+  width: 500px;
+  height: 430px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 30px;
+}
+.tour-2{
+  height: 105px;
+  width: 158px;
+  background-size: cover;
+  border-radius: 10px 10px 10px 10px;
+  display: inline-block;
+  margin-right: 4.5px;
+}
+.tour-3{
+  height: 105px;
+  width: 158px;
+  background-size: cover;
+  border-radius: 10px 10px 10px 10px;
+  display: inline-block;
+  margin-left: 4.5px;
+}
+.tour-4{
+  height: 105px;
+  width: 158px;
+  background-size: cover;
+  border-radius: 10px 10px 10px 10px;
+  display: inline-block;
+  margin-left: 9.5px;
+}
+.threecontainers{
+  padding-left: 30px;
+  width: 600px;
+  
+}
+.tour-1{
+  background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/02/The-Golden-Pavilion.-Kinkakuji-Temple-in-Kyoto-Japan.jpg')
+}
+.tour-2{
+  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4472_b479ff.jpg')
+}
+.tour-3{
+  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4463_6e87f5.jpg')
+}
+.tour-4{
+  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4469_6dee66.jpg')
+}
+
+
+/* container Japan Tour1 */
+
+.tour1{
+  font-family: Roboto, Arial, sans-serif;
+  width: 490px;
+  height: 500px;
+  border-radius: 15px;
+  padding: 10px 10px 10px 10px;
+}
+.tour1 h1{
+  font-size: 40px;
+}
+.tour1 h2{
+  font-size: 23px;
+  margin-bottom: 18px;
+  margin-top: 12px;
+  font-weight:900;
+}
+.tour1 p{
+  font-size: 13px;
+  line-height: 0.7;
+  margin-bottom: 11px;
+  color: #bab8be;
+}
+.title h1{
+  padding: 50px 50px 0px 159px ;
+  margin-bottom: 15px;
+  font-weight:900;
+  font-size: 23px;
+}
+.detailsparagraph{
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 11px;
+  margin-left: 80px;
+}
+.iconss{
+  margin-left: 80px;
+}
+.container2 {
+  padding: 0px 50px 0px 80px ;
+  line-height: 2;
+}
+.container2 p{
+  font-size: 15px;
+}
+.details img{
+  height: 15px;
+  width: 15px;
+  margin-top: 8px;
+}
+
+/*Customer Section*/
+
+.containertwo {
+display: inline-block;
+width: 1500px;
+padding-top: 0px;
+height: 400px;
+}
+
+.book-image{
+  height: 400px;
+  width: 1120px;
+  background-size: cover;
+  padding: 0px 50px 0px 80px ;
+}
+/* CUSTOMER PHOTOS*/
+
+.tourimages{
+  height: 360px;  
+  width: 800px;
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.tourone {
+  width: 450px;
+  height: 360px;
+  background-size: cover;
+  display: inline-block;
+  float: left;
+  border-radius: 10px;
+}
+
+.tourtwo {
+  height: 170px;
+  width: 250px;
+  background-size: cover;
+  display: inline-block;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  
+}
+.tourthree {
+  height: 170px;
+  width: 250px;
+  background-size: cover;
+  display: inline-block;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  
+}
+
+
+.tourfour{
+  width: 300px;
+  height: 360px;
+  border-radius: 10px;
+  background-size: cover;
+  float: right;
+  margin-bottom: 200px;
+  margin-right: 12rem;
+}
+
+.tourone{
+  background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/02/The-Golden-Pavilion.-Kinkakuji-Temple-in-Kyoto-Japan.jpg')
+}
+.tourtwo{
+  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4472_b479ff.jpg')
+}
+.tourthree{
+  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4463_6e87f5.jpg')
+}
+.tourfour{
+  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4469_6dee66.jpg')
+}
+
+/* CUSTOMER SECTION CONTAINER3 */
+
+.happy h1{
+padding: 50px 50px 20px 16rem;
+font-weight:900;
+font-size: 24px;
+}
+
+.container3 {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+padding: 19px 50px 90px 50px;   
+}
+.customer {
+border: 1px solid #e9ecec;
+height:300px;
+width: 500px;
+margin: 10px;
+border-radius: 20px;  
+align-items: center;
+}
+
+.customer-image{
+margin-top: 20px;
+margin-left: 22rem;
+height: 60px;
+width: 60px;
+background-size: cover;
+border-radius: 50%;
+}
+.customer-1{
+background-image: url('https://i.pinimg.com/originals/cc/56/e9/cc56e94b4c5a40605f3f016cf448cce5.jpg ')
+}
+.customer-2{
+background-image: url('https://i.pinimg.com/originals/11/91/be/1191be158f7a6c36540f2f576abd3596.jpg')
+}
+
+.customer h1 {
+font-weight: bold;
+margin-top: 10px;
+margin-left: 21rem;
+}
+.customer h2 {
+margin-top: 18px;
+justify-content: center;
+font-weight: lighter;
+padding: 10px;
+}
+.customer a{
+color: rgb(6, 135, 255);
+padding: 10px;
+}
+.highlightblue{
+color:#00B3FF
+}
+.price {
+font-size: 24px;
+font-weight: 700;
+font-style: normal;
+}
+.bold{
+font-weight: bold;
+}
+
+
+.tour img{
+height: 10px;
+width: 10px;
+margin-right: 5px;
+}
+
+.tour-details {
+display: flex;
+justify-content: space-between;
+}
+.happy{
+margin-top: 27px;
+margin-bottom: 0.5px;
+}
+.happy img {
+height: 30px;
+width: 30px;
+margin-left: 5px; /* Adjust the margin as needed */
+float: right; /* Float the images to the right */
+}
+
+.blue-background {
+border-radius: 100%; 
+background-color: #00B3FF;
+}
+.gray-background{
+border-radius: 100%; 
+background-color: #c9caca;
+}
+
+
+.fade-in {
+opacity: 0;
+animation: fadeInAnimation 2s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}

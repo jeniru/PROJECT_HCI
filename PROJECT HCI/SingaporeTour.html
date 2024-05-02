@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Website</title>
+    <link rel="stylesheet" href="SingaporeTour.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Header content, including logo and navigation links -->
+        <img src="https://scontent.fdvo5-1.fna.fbcdn.net/v/t1.15752-9/432869053_1125885701869261_5440541884617776561_n.png?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFgw1UogHtnyqAEhNl4AUW7ZKMSXebEkctkoxJd5sSRywQWrxK3YeNoErCPrFm5TqRPgbGk8kev75v-4JEyOLxj&_nc_ohc=Zz1vNjD3RFQAb4RKO6I&_nc_ht=scontent.fdvo5-1.fna&oh=03_AdX09BQEZbCFgpaAaTa4AL5M_vscP1Nh3J2lP09x0AQrdw&oe=663CCFBA" alt="logo">
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about Us">About</a>
+            <a href="#Tour Packages">Tour Packages</a>
+            <a href="#Contact Us">Contact Us</a>
+        </nav>
+        <div class="languange">
+            <select name="Eng" id="Languange">
+                <option value="Eng">Eng</option>
+            </select>
+            <a href="LINK NI DIRI" class="btn">Log In</a>
+            <button class="signup-button">Sign Up</button>
+        </div>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+    </header>
+    <main>  
+        <section class="home">
+        </section>  
+        <div class="back">
+            <button class="back-button"><a href="hciPROJECT.html"> Back </a></button>
+        </div>
+        <!-- TOUR PACKAGES -->
+
+        <section class="container fade-in">
+            <div class="tour">
+                <div class="tour-image tour-1"></div>
+                <div class="threecontainers">
+                <div class="tour-image tour-2"></div>
+                <div class="tour-image tour-3"></div>
+                <div class="tour-image tour-4"></div>
+            </div>
+            </div>
+            <div class="tour1">
+                <h1>Japan Tour</h1>
+                <h2>from<span class="highlightblue"> 34€</span></h2>
+                <div class="japantourpar">
+                <P>Start in Tokyo and end in Osaka! With the Explorer tour Japan One Life</P>
+                <P>Adventures - 10 Days, you have a 10 days tour package taking you through</P>
+                <p>Tokyo, Japan and 4 other destinations in Japan. Japan One Life Adventures - 10</p>
+                <p>Days includes accommodation, an expert guide, meals, transport and more.</p>
+                <div id='calendar'></div>
+                <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+                <script src="JapanTour.js"></script>
+                <div class="time-title"><h3>Time</h3></div>
+                <input type="time" id="timeInput" name="timeInput" placeholder="Select a time">
+             
+                <button class="booknow-button"><a href="Japanbook.html">Book Now</a></button>
+            </div>
+            </div>
+        </section>
+        
+        <!-- Details -->
+        <div class="title fade-in">
+            <h1>Details</h1>
+        </div>
+        <section class="container2 fade-in">
+            <div class="details">
+            <div class="detailsparagraph">
+            <p>Konnichiwa everyone! Japan offers a mind-blowing mix of ancient tradition, neon-lit </p>
+            <p>metropolises, breathtaking natural beauty, and a unique culture that will leave you</p>
+            <p>enchanted. To make the most of our journey, Our action-packed Japan tour blends</p>
+            <p>the neon lights of Tokyo with serene temples in Kyoto, offering a delicious mix of</p>
+            <p>cultural experiences and breathtaking natural beauty. This is just a taste of what</p>
+            <p>awaits us in Japan. Get ready for an unforgettable adventure filled with cultural</p>
+            <P>encounters, historical wonders, and delicious food!</P>
+            </div>
+            <div class="iconss">
+            <p><img src="https://i.ibb.co/zRkD85B/002-group.png"> <span class="bold">Number of group: </span> 10-15</p>
+            <p><img src="https://i.ibb.co/sPvYdGj/003-hour-glass.png"> <span class="bold">Duration: </span> 5 hours and 45 minutes</p>
+            <p><img src="https://i.ibb.co/WfY6ztn/001-location.png"> <span class="bold">Departuring and arriving areas: </span> Haneda Airport</p>
+            <p><img src="https://i.ibb.co/qB8McDH/002-tour-guide.png"> <span class="bold">Guide service: </span> Included</p>
+            <p><img src="https://i.ibb.co/XCTGVmd/003-language.png"> <span class="bold">Language: </span> English, Japanese</p>
+            <p><img src="https://i.ibb.co/Vq72sHH/001-ticket.png"> <span class="bold">Entry Fees: </span> 60.00$(tax-free)</p>
+            <p><img src="https://i.ibb.co/7XPzzGD/002-bus.png"> <span class="bold">EntryTransportation: </span> Bus</p>
+             </div>
+            </div>
+            
+        </section>
+
+        <div class="title fade-in">
+            <h1>Customer Photos</h1>
+        </div>
+
+        <section class="containertwo fade-in">
+            <div class="tourimages">
+                <div class="tour-image tourone"></div>      
+                <div class="tour-image tourtwo"></div>
+                <div class="tour-image tourthree"></div>
+            </div>
+            <div class="tour-image tourfour"></div>
+        </section>
+        <!-- HAPPY CUSTOMER -->
+       <div class="happy fade-in">
+        <h1>Happy Customer Says
+            <img class="blue-background" src="https://i.ibb.co/zhPCxSN/right-arrow-angle.png">
+            <img class="gray-background" src="https://i.ibb.co/nfgqnsq/left-arrow.png">
+        </h1>
+        </div>
+
+       
+    
+        <section class="container3 fade-in">
+            <div class="customer">
+                <div class="customer-image customer-1"></div>
+                <h1>Gu Wa Po</h1>
+                <h2>Lorem Ipsum ha sido el texto de relleno estándar de la industria desde el siglo XVI, cuando un impresor desconocido tomó una galería de tipos y los mezcló para hacer un libro de muestras tipográficas. Ha sobrevivido no sólo a cinco siglos, sino también al salto hacia la composición tipográfica electrónica, permaneciendo esencialmente sin cambios.</h2>
+            </div>
+            <div class="customer">
+                <div class="customer-image customer-2"></div>
+                <h1>Ma Gun Duh</h1>
+                <h2>は、無名の印刷業者が活字のゲラをスクランブルして活字見本帳を作成した 1500 年代以来、業界の標準的なダミーテキストです。それは 5 世紀だけでなく、電子写植への飛躍の時代にも、本質的には変わっていないまま生き残ってきました。</h2>
+            </div>
+        </section>
+    
+    </main>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+    
+
+</body>
+</html>
