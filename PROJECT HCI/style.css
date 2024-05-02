@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior:smooth ;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color-dark: #052659;
+    --primary-color-light: #2691fc;
+    --primary-color: #01a2ff;
+    --primary-btn-color: #00B3FF;
+    --text-grey: #333333;
+    --text-light: #efefef;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/header.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #ffffff2c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--white);
+    user-select: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.nav a {
+    position: relative;
+    font-size: 1.1rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 3px;
+    background: #00bfff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scalex(0); 
+    transition: transform .5s;
+}
+
+.nav a:hover::after {
+    transform-origin: left;
+    transform: scalex(1);
+}
+
+.nav .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: var(--primary-btn-color);
+    border: 2px var(--primary-btn-color);
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .553
+}
+
+.nav .btnLogin-popup:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.container_tagline {
+    padding-block: 10rem 15rem;
+}
+
+.container_tagline p{
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+    color: #333333b0;
+    text-align: center;
+}
+
+.container_tagline h1 {
+    margin: auto;
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.container_tagline .outline_text {
+    font-weight: 600;
+    font-style: italic;
+    color: #fff700;
+}
+
+.grey_container {
+    display: flex;
+    background-color: red;
+    background-size: 80px;
+    border-radius: 40px;
+    padding: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 95%;
+}
+
+.tours {
+    display: block;
+    align-items: center;
+    justify-content: left;
+    margin: 10px;
+    padding: 20px;
+    margin-bottom: 130px;
+}
+
+.pub-tours__container h2 {
+    font-size: 25px;
+    font-weight: 600;
+    justify-content: center;
+}
+  
+.pub-tours__container {
+    display: flex;
+    background-color: var(--white);
+    background-size: 45px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    height: 20vh;
+}
+  
+.pub-tours__form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px auto;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+  
+.pub-tours__form-group {
+    flex: 1 1 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: row;
+}
+.pub-tours__form-group span {
+    font-size: 1.75rem;
+}
+.pub-tours__form-group label {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.pub-tours__form-group input {
+    display: block;
+    width: 70%;
+    max-width: 150px;
+    padding-block: 5px;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+}
+
+.pub-tours__form-group input::placeholder {
+    color: #ccccccc5;
+}
+  
+.pub-tours__form-group input, .public-tours__form-group select {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
