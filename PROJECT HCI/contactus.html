@@ -4,7 +4,7 @@
 <head>
 
     <!-- *******  Link To CSS Style Sheet  ******* -->
-    <link rel="stylesheet" type="text/css" href="contactus.html">
+    <link rel="stylesheet" type="text/css" href="contactus.css">
 
     <!-- *******  Font Awesome Icons Link  ******* -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -31,8 +31,8 @@
 
         <ul class="navlist">
             <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Tour Packages</a></li>
+            <li><a href="ABOUTUS.HTML">About Us</a></li>
+            <li><a href="hciPROJECT.html">Tour Packages</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
 
@@ -52,7 +52,7 @@
 
             <!--  *******   Left Section (Column) Starts   *******  -->
 
-            <section class="col left">
+            <section class="col left fade-in">
 
                 <!--  *******   Title Starts   *******  -->
 
@@ -106,7 +106,7 @@
 
             <!--  *******   Right Section (Column) Starts   *******  -->
 
-            <section class="col right">
+            <section class="col right fade-in">
 
                 <!-- Form Starts -->
 
@@ -161,7 +161,7 @@
 
     <!-- ******* Footer Start ******* -->
 
-    <footer class="footer">
+    <footer class="footer fade-in">
         <div class="footer_container">
             <div class="footer_logo">
                 <a href="#" class="foot_logo"><img src="images/logo.png"></a>
@@ -226,6 +226,18 @@
     </footer>
 
     <!-- ******* Footer End ******* -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            const sections = document.querySelectorAll('.fade-in');
+            sections.forEach(section => {
+                section.style.transition = 'opacity 1s ease-in';
+                section.style.opacity = '0';
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                }, 100);
+            });
+        });
+    </script>
 
 </body>
 
