@@ -53,10 +53,9 @@ header {
 
 .logo {
   font-size: 2rem;
-  color: var(--white);
+  color: var(--black);
   user-select: none;
 }
-
 .logo {
   display: flex;
   align-items: center;
