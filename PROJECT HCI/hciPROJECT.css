@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Doodle+Shadow&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -6,81 +8,122 @@
   border: none;
   outline: none;
   scroll-behavior:smooth ;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Poppins";
 }
 html{
   font-size: 62.5%;
   overflow-x: hidden;
 }
 
-body{
- 
+section{
+  min-height: 10vh;
+  padding: 10rem 9% 2rem;
+}
+
+:root {
+  --primary-color-dark: #052659;
+  --primary-color-light: #2691fc;
+  --primary-color: #01a2ff;
+  --primary-btn-color: #00B3FF;
+  --text-grey: #333333;
+  --text-light: #efefef;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  position: relative;
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100vh;
 }
-section{
-  min-height: 10vh;
-  padding: 10rem 9% 2rem;
-}
-.header{
+
+header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;  
-  padding: 2rem 9%;
+  width: 100%;
+  padding: 20px 100px;
+  background: #ffffff2c;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
-  box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.253);
+  z-index: 999;
 }
 
-.header img {
-  width: 60px;
-  height: auto;
+.logo {
+  font-size: 2rem;
+  color: var(--white);
+  user-select: none;
 }
-.logo{
-  font-weight: 600;
-  cursor: default;
-  margin-right: auto;
-}
-.navbar a{
-  font-size: 1.3rem;
-  color: var(--text-color);
-  margin-right: 3rem;
-  transition: .3s;
-}
-.navbar {
-  text-align: center;
-  color: rgb(0, 0, 0);
-}
-select[name="Eng"] {
-  font-size: 1.3rem;
-  border: none;
-  background-color: transparent;
-  border-radius: 5px;
-  color: rgb(0, 0, 0);
-}
-.btn {
-  font-size: 1.3rem;
-  color: rgb(0, 0, 0);
-}
-.signup-button {
-  background-color: #00B3FF;
-  border: none;
-  color: rgb(0, 0, 0);
-  padding: 10px 32px;
-  text-align: center;
+
+.logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 1.3rem;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 20px;
 }
+.logo img{
+  width: 50px;
+  height: 50px;
+}
+
+.nav a {
+  position: relative;
+  font-size: 1.1rem;
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 3px;
+  background: #00bfff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scalex(0); 
+  transition: transform .5s;
+}
+
+.nav a:hover::after {
+  transform-origin: left;
+  transform: scalex(1);
+}
+
+.nav .btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: var(--primary-btn-color);
+  border: 2px var(--primary-btn-color);
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  font-weight: 500;
+  margin-left: 40px;
+  transition: .553
+}
+
+.nav .btnLogin-popup:hover {
+  background: var(--white);
+  color: var(--primary-color);
+}
+
 /* MGA TITLE*/
 
 .title h1{
