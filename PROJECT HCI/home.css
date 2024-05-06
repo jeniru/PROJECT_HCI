@@ -238,8 +238,102 @@ header {
     border-radius: 5px;
 }
 
-.containers{
-    text-align: center;
+
+.titl3 h1{
+    margin-top: 90px;
+    margin-left: 18.5rem;
+    margin-bottom: 27px;
+    font-weight: 900;
+    font-size: 23px;
+}
+
+.container-0 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px 50px 50px 50px;
+    background-color: var(--white);
+    height: 630px;
+    width: 100vw;
+    background-size: cover;
+}
+
+.highlightblue{
+    color: #00B3FF;
+}
+.prices {
+    font-weight: 900;
+    font-size: 15px;
+}
+.tour{
+    width: 270px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+.tour-image{
+    height: 280px;
+    margin-bottom: 10px;
+    align-items: center;
+    background-size: cover;
+    border-radius: 15px 15px 15px 15px; 
+    transition: 1s;
+}
+.tour-image:hover{
+    transform: scale(1.1);
+}
+
+
+.tour-1{
+    background-image: url('images/JAPAN.jpg')
+}
+.tour-2{
+    background-image: url('images/SWISSjpg.jpg')
+}
+.tour-3{
+    background-image: url('images/ROME.jpg')
+}
+.tour-4{
+    background-image: url('images/Spain.jpg')
+}
+
+.tour h3 {
+    text-decoration: none;
+}
+.tour p {
+    padding: 10px;
+    color: var(--primary-color);
+}
+
+.tour a{
+    color: var(--black);
+    padding: 10px;
+}
+
+.tour img{
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+}
+
+.tour-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation ease 2s forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
 }
 
 .container {
@@ -302,7 +396,7 @@ header {
 }
 
 .box-2 p {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     padding-top: 20px;
 }
 
@@ -354,22 +448,33 @@ header {
 }
 
 .box-4 h2 {
-    font-size: 23px;
-    font-weight: 600;
-    color: red;
+    font-size: 25px;
+    font-weight: 700;
+    justify-content: center;
+    text-align: center;
+    color: var(--black);
     padding-bottom: 20px;
 }
 
 .box-4 p {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
     padding-bottom: 20px;
 }
 
+.box-4 p span {
+    color: #ff5015;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .box-4 .btn {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 25px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     color: white;
     border-radius: 30px;
@@ -388,6 +493,169 @@ header {
     height: 400px;
     position: relative;
     margin-right: 10px;
+}
+
+/*services*/
+
+.title h1 {
+    margin-top: 40px;
+    margin-left: 17.5rem;
+    margin-bottom: 27px;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.service_container { 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 50px 80px 50px;
+    background-color: var(--white);
+    background-size: cover;
+    height: 520px;
+    width: 100vw;
+}
+.services{
+    width: 280px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.service-image{
+    height: 220px;
+    margin-bottom: 10px;
+    background-size: cover;
+    border-radius: 15px 15px 15px 15px;
+    transition: 1s;
+}
+.service-image:hover{
+    transform: scale(1.1);
+}
+
+.service-1{
+    background-image: url('https://media.licdn.com/dms/image/C5612AQEpFavDU_pY-w/article-cover_image-shrink_600_2000/0/1632773082680?e=2147483647&v=beta&t=RW4wLrZZufPNqGDMnPqPg1pOW8Mnb4G1Kxd0mGfuHl0')
+}
+.service-2{
+    background-image: url('https://guidaviaggionline.it/wp-content/uploads/lucca-italia.jpg')
+}
+.service-3{
+    background-image: url('https://www.drinkbien.com/cdn/shop/files/carte-b-1.jpg?v=1695922097&width=750')
+}
+.service-4{
+    background-image: url('https://img.freepik.com/premium-photo/transport-tourism-road-trip-people-concept-group-happy-passengers-boarding-travel-bus_380164-138910.jpg?w=740')
+}
+
+.services h2 {
+    padding: 10px;
+}
+.services p {
+    padding: 10px;
+}
+.services a{
+    color: rgb(6, 135, 255);
+    padding: 10px;
+}
+
+.container-3 {
+    height: 500px;
+    width: 100vw;
+    background-size: cover;
+    background-image: linear-gradient(to right, #0871AC , #077abd8c, #87CAF0);
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+/*honda*/
+
+.box-6 {
+    height: 400px;
+    width: 570px;
+    background-color: #efefef86;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+.form-group .btn {
+    display: flex;
+    align-self: center;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    background-color: #00B3FF;
+}
+
+/*feedbacks*/
+
+.happy h1{
+    padding: 50px 50px 20px 16rem;
+    font-weight:900;
+    font-size: 24px;
+}
+
+.feedbacks_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 50px 90px 50px;   
+    background-color: white;
+    width: 100vw;
+    background-size: cover;
+    column-gap: 50px;
+}
+.customer-1 {
+    border: 1px solid #e9ecec;
+    height:350px;
+    width: 580px;
+    padding: 10px;
+    border-radius: 20px;  
+    align-items: center;
+    column-gap: 50px;
+}
+
+.customer-2 {
+    border: 1px solid #e9ecec;
+    height:350px;
+    width: 580px;
+    padding: 10px;
+    border-radius: 20px;  
+    align-items: center;
+}
+
+.customer-image{
+    margin-top: 20px;
+    margin-left: 22rem;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    border-radius: 50%;
+}
+.customer-01{
+    background-image: url('images/adi_1.jpeg')
+}
+.customer-02{
+    background-image: url('images/adi_2.jpg')
+}
+
+.customer h1 {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 21rem;
+}
+.customer p {
+    margin-top: 18px;
+    justify-content: center;
+    font-weight: 300;
+    color: #ffffff81;
+    padding: 10px;
 }
 
 
