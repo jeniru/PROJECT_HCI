@@ -35,7 +35,7 @@ body {
   
   /* Inside ordercomplete.css */
 
-button {
+ a{
     border: #4cc9ff solid 2px; /* Blue border with thickness */
     border-radius: 30px;
     background-color: #ffffff;
@@ -48,8 +48,18 @@ button {
     font-size: 16px;
   }
 
+  button {
+    background-color: #ffffff;
+    color: #4cc9ff;
+
+    font-weight: 900;
+    font-size: 16px;
+    border: #4cc9ff;
+  }
+
   
   a:hover {
     background-color: #0067cc;
+    color: white;
   }
   
