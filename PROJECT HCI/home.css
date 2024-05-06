@@ -335,7 +335,8 @@ header {
 
 .container-2 {
     height: 350px;
-    width: 100%;
+    width: 100vw;
+    background-size: cover;
     background-image: linear-gradient(to right, #18c8dfdb , #30A3E4, #87CAF0);
     display: flex;
     column-gap: 100px;
