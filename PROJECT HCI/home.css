@@ -214,7 +214,7 @@ header {
     padding: 0px 50px 50px 50px;
     background-color: var(--white);
     height: 630px;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
 }
 
@@ -255,7 +255,7 @@ header {
     background-image: url('images/ROME.jpg')
 }
 .tour-4{
-    background-image: url('images/Spain.jpg')
+    background-image: url('https://images.adsttc.com/media/images/5254/4190/e8e4/4eff/0200/06cf/slideshow/sfpassio.jpg?1381253501');
 }
 
 .tour h3 {
@@ -389,7 +389,7 @@ header {
 
 .container-2 {
     height: 350px;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
     background-image: linear-gradient(to right, #18c8dfdb , #30A3E4, #87CAF0);
     display: flex;
@@ -473,7 +473,7 @@ header {
     background-color: var(--white);
     background-size: cover;
     height: 520px;
-    width: 100vw;
+    width: 100%;
 }
 .services{
     width: 280px;
@@ -518,7 +518,7 @@ header {
 
 .container-3 {
     height: 500px;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
     background-image: linear-gradient(to right, #0871AC , #077abd8c, #87CAF0);
     display: flex;
@@ -565,7 +565,7 @@ header {
     flex-wrap: wrap;
     padding: 20px 50px 90px 50px;   
     background-color: white;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
     column-gap: 50px;
 }

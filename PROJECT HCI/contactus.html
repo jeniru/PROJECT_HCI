@@ -27,22 +27,14 @@
 
 
     <header>
-        <a href="#" class="logo"><img src="logo.png"></a>
-
-        <ul class="navlist">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ABOUTUS.HTML">About Us</a></li>
-            <li><a href="hciPROJECT.html">Tour Packages</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
-
-        <div class="nav_btn">
-            <a href="#" class="log_btn">Login</a>
-            <a href="#" class="btn">Sign Up</a>
-        </div>
-        <div class="menu" id="menu-icon">
-            <i class="ri-menu-line"></i>
-        </div>
+        <h1><a href="#" class="logo"><img src="images/wanderlogo.png" alt="Wander Bros. Logo">Wander</a></h1>
+        <nav class="nav">
+            <a href="home.html">Home</a>
+            <a href="ABOUTUS.HTML">About Us</a>
+            <a href="hciPROJECT.html">Tour Packages</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+        <button class="btnLogin-popup"><a href="signup.html">Login</a></button>
     </header>
 
     <!-- *******  END OF HEADER  *******  -->
@@ -227,7 +219,7 @@
 
     <!-- ******* Footer End ******* -->
     <script>
-        document.addEventListener("DOMContentLoaded", function(event) {
+        document.addEventListener("DOMContentLoaded", function (event) {
             const sections = document.querySelectorAll('.fade-in');
             sections.forEach(section => {
                 section.style.transition = 'opacity 1s ease-in';
