@@ -27,46 +27,12 @@
                     <h2>Your dream vacation starts here.<br><span class="outline_text"> Wander </span> more, worry less</h2>
                 </div>
                 
-                <div class="booking_search" id="book">
-                    <div class="grey_container">
-                        <div class="pub-tours__container">
-                            <div class="tours">
-                                <h2><i class="ri-earth-fill" id="icons"></i>Tours<br></h2>
-                            </div>
-                            <form class="pub-tours__form">
-                                <div class="pub-tours__form-group">
-                                    <span><i class="ri-calendar-2-line" id="icons"></i></span><label for="tour-date">Date:</label><br>
-                                    <input type="date" id="tour-date" name="tour-date">
-                                </div>
-                                <div class="pub-tours__form-group">
-                                    <span><i class="ri-time-line" id="icons"></i></span><label for="tour-time">Time:</label><br>
-                                    <input type="time" id="tour-time" name="tour-time">
-                                </div>
-                                <div class="pub-tours__form-group">
-                                    <span><i class="ri-keyboard-line" id="icons"></i></span><label for="tour-type">Tour:</label><br>
-                                    <select id="tour-type" name="tour-type">
-                                        <option value="">Select...</option>
-                                        <option value="option1">Dinner with a View Package</option>
-                                        <option value="option2">Wine Tasting in Barcelona</option>
-                                        <option value="option3">Sagrada Famillia Tour</option>
-                                        <option value="option4">Leaning Tower of Pisa Tour</option>
-                                        <option value="option5">Church and Chapel Tour</option>
-                                    </select>
-                                </div>
-                                <div class="pub-tours__form-group">
-                                    <span><i class="ri-bus-2-line" id="icons"></i></span><label for="transportation">Transportation:</label><br>
-                                    <select id="transportation" name="transportation">
-                                        <option value="">Select...</option>
-                                        <option value="option1">Bus</option>
-                                        <option value="option2">Minivan</option>
-                                        <option value="option3">Bike</option>
-                                        <option value="option4">Luxury Experience</option>
-                                    </select>
-                                </div>
-                                
-                              </form>
-                        </div>
-                    </div>
+                <div class="grey_container">
+                    <div id="search-wrapper">
+                        <i class="search-icon fas fa-search"></i>
+                        <input type="text" id="search" placeholder="....">
+                        <button id="search-button">Search</button> 
+                      </div>
                 </div>
             </div>
           </div>   
@@ -323,5 +289,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="home.js"></script>
 </body>
 </html>
