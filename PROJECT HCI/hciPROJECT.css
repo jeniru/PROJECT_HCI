@@ -62,7 +62,7 @@ header {
 
 .logo {
   font-size: 2rem;
-  color: var(--black);
+  color: black;
   user-select: none;
 }
 
@@ -72,14 +72,13 @@ header {
   text-decoration: none;
 }
 .logo img{
-  width: 50px;
+  width: 60px;
   height: 50px;
 }
-
 .nav a {
   position: relative;
-  font-size: 2rem;
-  color: var(--black);
+  font-size: 1.7rem;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   margin-left: 40px;
@@ -104,7 +103,7 @@ header {
   transform: scalex(1);
 }
 
-.nav .btnLogin-popup {
+.btnLogin-popup {
   width: 130px;
   height: 50px;
   background: var(--primary-btn-color);
@@ -112,18 +111,22 @@ header {
   outline: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   color: var(--text-light);
   font-weight: 500;
   margin-left: 40px;
   transition: .553
 }
 
-.nav .btnLogin-popup:hover {
+.btnLogin-popup a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.btnLogin-popup:hover {
   background: var(--white);
   color: var(--primary-color);
 }
-
 /* MGA TITLE*/
 
 .title h1{
@@ -653,5 +656,6 @@ hr {
       margin: 0px;
   }
 }
+
 
 
