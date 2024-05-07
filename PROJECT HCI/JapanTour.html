@@ -6,6 +6,7 @@
     <title>Tour Website</title>
     <link rel="stylesheet" href="JapanTour.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
 </head>
 <body>
     <header>
@@ -44,11 +45,9 @@
                 <p>Tokyo, Japan and 4 other destinations in Japan. Japan One Life Adventures - 10</p>
                 <p>Days includes accommodation, an expert guide, meals, transport and more.</p>
                 <div id='calendar'></div>
-                <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
                 <script src="JapanTour.js"></script>
                 <div class="time-title"><h3>Time</h3></div>
                 <input type="time" id="timeInput" name="timeInput" placeholder="Select a time">
-             
                 <button class="booknow-button"><a href="Japanbook.html">Book Now</a></button>
             </div>
             </div>
@@ -195,7 +194,22 @@
             });
         });
     </script>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                selectable: true,
+                select: function(start, end) {
+                    console.log('You selected from ' + start.format() + ' to ' + end.format());
+                    document.getElementById('timeInput').value = start.format();
+                }
+            });
+
+            calendar.render();
+        });
+    </script>
 
 </body>
 </html>
