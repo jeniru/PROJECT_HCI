@@ -75,11 +75,7 @@ header {
 
 .logo {
   font-size: 2rem;
-<<<<<<< HEAD
   color: var(--white);
-=======
-  color: black;
->>>>>>> 1d6119360fff8ec3ee463eb2aed9e37bb1dfb8a3
   user-select: none;
 }
 
@@ -94,13 +90,8 @@ header {
 }
 .nav a {
   position: relative;
-<<<<<<< HEAD
   font-size: 20px;
   color: var(--text-grey);
-=======
-  font-size: 1.7rem;
-  color: black;
->>>>>>> 1d6119360fff8ec3ee463eb2aed9e37bb1dfb8a3
   text-decoration: none;
   font-weight: 500;
   margin-left: 40px;
@@ -133,11 +124,7 @@ header {
   outline: none;
   border-radius: 8px;
   cursor: pointer;
-<<<<<<< HEAD
   font-size: 18px;
-=======
-  font-size: 1.8rem;
->>>>>>> 1d6119360fff8ec3ee463eb2aed9e37bb1dfb8a3
   color: var(--text-light);
   font-weight: 500;
   margin-left: 40px;
@@ -150,11 +137,7 @@ header {
 }
 
 .btnLogin-popup:hover {
-<<<<<<< HEAD
   background: #f6ff74;
-=======
-  background: var(--white);
->>>>>>> 1d6119360fff8ec3ee463eb2aed9e37bb1dfb8a3
   color: var(--primary-color);
 }
 /* MGA TITLE*/
