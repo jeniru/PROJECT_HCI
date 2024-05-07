@@ -30,6 +30,7 @@ body {
     flex-wrap: wrap;
     position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 header {
