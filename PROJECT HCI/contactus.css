@@ -19,94 +19,101 @@
 }
 
 header {
-    overflow: hidden;
-    width: 100%;
+    position: fixed;
     top: 0;
-    right: 0;
-    z-index: 1000;
-    padding: 20px 8%;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #ffffff2c;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-evenly;
-    transition: all 50s ease;
-    background-color: #ffffff22;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--white);
+    user-select: none;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .logo img {
-    width: 50px;
-    height: auto;
+    width: 60px;
+    height: 50px;
 }
 
-
-.navlist {
+.main-content {
+    background: url(images/header.jpg) no-repeat;
     display: flex;
-}
-
-
-.navlist a {
-    display: inline-block;
-    margin: 0 35px;
-    color: var(--text-light);
-    font-size: 16px;
-    font-weight: 600;
-    transition: all .50s ease;
-}
-
-
-.navlist a:hover {
-    text-shadow: 3px 3px 20px var(--primary-color-dark), -2px 2px 30px var(--white);
-}
-
-
-.nav_btn {
-    display: flex;
+    justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    position: relative;
+    min-height: 100vh;
 }
 
 
-.btn {
-    display: inline-block;
-    padding: 14px 35px;
+.nav a {
+    position: relative;
+    font-size: 1.1rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 3px;
+    background: #00bfff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scalex(0);
+    transition: transform .5s;
+}
+
+.nav a:hover::after {
+    transform-origin: left;
+    transform: scalex(1);
+}
+
+.btnLogin-popup {
+    width: 130px;
+    height: 50px;
     background: var(--primary-btn-color);
-    font-size: 14px;
-    font-weight: 600;
+    border: 2px var(--primary-btn-color);
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
     color: var(--text-light);
-    border-radius: 30px;
-    margin-right: 12px;
-    transition: all .6s ease;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .553
 }
 
-
-.btn:hover {
-    background: var(--primary-color-light);
-    color: var(--white);
-    box-shadow: 0 0 20px var(--primary-color-light);
-    transform: scale(1.1);
+.btnLogin-popup a {
+    text-decoration: none;
+    color: var(--text-dark);
 }
 
-
-.log_btn {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text-grey);
-    margin-right: 12px;
-    transition: all .6s ease;
-}
-
-
-.log_btn:hover {
-    color: var(--white);
-    text-shadow: 3px 3px 20px var(--primary-color-dark), -2px 2px 30px var(--white);
-    transform: scale(1.1);
+.btnLogin-popup:hover {
+    background: var(--white);
+    color: var(--primary-color);
 }
 
 
@@ -125,7 +132,7 @@ body {
     min-height: 100vh;
     background-image: url("https://cdn.pixabay.com/photo/2015/07/05/13/44/beach-832346_1280.jpg");
     background-repeat: repeat;
-    background-size: 1400px 700px;
+    background-size: 1700px 700px;
 }
 
 .container {
@@ -149,15 +156,16 @@ body {
 }
 
 .row section.left {
-    padding-top: 50px;
+    padding-top: 150px;
     flex-basis: 35%;
     min-width: 320px;
     margin-right: 60px;
 }
 
 .row section.right {
-    padding-top: 25px;
-    flex-basis: 55%; /* right colomn resizing */
+    padding-top: 120px;
+    flex-basis: 55%;
+    /* right colomn resizing */
 }
 
 section.left .contactTitle h2 {
@@ -314,23 +322,10 @@ textarea::-webkit-scrollbar-thumb {
 
 /* ------  Footer   ------ */
 
-.footer_container {
-    max-width: 1080px;
-    margin: auto;
-    height: fit-content;
-}
-
-.row {
-    display: flex;
-}
-
-ul {
-    list-style: none;
-}
-
 .footer {
     background-color: #3f3e3e;
     padding: 20px 0;
+    width: 10000px;
 }
 
 .footer-col {
@@ -396,6 +391,21 @@ hr {
     width: 50px;
     height: auto;
 }
+
+
+.footer-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5000px;
+    height: 100px;
+    /* Adjust as needed */
+    background-color: #3f3e3e;
+    /* Color of the footer */
+    z-index: -1;
+    /* Ensures the footer is behind other content */
+}
+
 
 /* ------  Footer End   ------ */
 
