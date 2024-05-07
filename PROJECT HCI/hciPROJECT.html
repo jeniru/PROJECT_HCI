@@ -9,14 +9,14 @@
 </head>
 <body>
     <header>
-        <h1><a href="#" class="logo"><img src="images/logo.png" alt="Wander Bros. Logo">Wander</a></h1>
+        <h1><a href="#" class="logo"><img src="images/wanderlogo.png" alt="Wander Bros. Logo">Wander</a></h1>
         <nav class="nav">
-            <a href="index.html">Home</a>
+            <a href="home.html">Home</a>
             <a href="ABOUTUS.HTML">About Us</a>
             <a href="hciPROJECT.html">Tour Packages</a>
             <a href="contactus.html">Contact Us</a>
-            <button class="btnLogin-popup">Login</button>
         </nav>
+        <button class="btnLogin-popup"><a href="signup.html">Login</a></button>
     </header>
 
     <main>
@@ -204,11 +204,7 @@
 
         <!-- HAPPY CUSTOMER -->
         <div class="happy">
-            <h1>Happy Customer Says
-                <img class="blue-background" src="https://i.ibb.co/zhPCxSN/right-arrow-angle.png">
-                <img class="gray-background" src="https://i.ibb.co/nfgqnsq/left-arrow.png">
-                
-            </h1>
+            <h1>Happy Customer Says</h1>
         </div>
         
         <section class="container3">
@@ -237,7 +233,7 @@
                     <br>
                     <h4>Wander</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
                         <li><a href="ABOUTUS.HTML">About Us</a></li>
                         <li><a href="hciPROJECT.html">Tour Packages</a></li>
                         <li><a href="contactus.html">Contact Us</a></li>
@@ -290,6 +286,32 @@
     </footer>
 
     <!-- ******* Footer End ******* -->
+
+    <script>
+                const body = document.body;
+        let lastScroll = 0;
+
+        window.addEventListener ('scroll', () => {
+            const currentScroll = window.pageYOffset 
+
+            if (currentScroll <= 0) {
+            body.classList.remove("scroll-up")
+            }
+
+            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+            body.classList.remove("scroll-up")
+            body.classList.add("scroll-down")
+            }
+
+            if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+            body.classList.remove("scroll-down")
+            body.classList.add("scroll-up")
+            }
+
+            lastScroll = currentScroll;
+
+        })
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
             const sections = document.querySelectorAll('.fade-in');

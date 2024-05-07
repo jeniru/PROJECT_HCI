@@ -1,11 +1,13 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior:smooth ;
     font-family: 'Poppins', sans-serif;
 }
 
-/* ------  Header  Start  ------ */
 :root {
     --primary-color-dark: #052659;
     --primary-color-light: #2691fc;
@@ -15,7 +17,6 @@
     --text-light: #efefef;
     --white: #ffffff;
     --black: #000000;
-    --max-width: 1440px;
 }
 
 header {
@@ -42,13 +43,11 @@ header {
     align-items: center;
     text-decoration: none;
 }
-
-.logo img {
+.logo img{
     width: 60px;
     height: 50px;
 }
-
-.main-content {
+.main-content{
     background: url(images/header.jpg) no-repeat;
     display: flex;
     justify-content: center;
@@ -82,7 +81,7 @@ header {
     background: #00bfff;
     border-radius: 5px;
     transform-origin: right;
-    transform: scalex(0);
+    transform: scalex(0); 
     transition: transform .5s;
 }
 
@@ -116,23 +115,19 @@ header {
     color: var(--primary-color);
 }
 
-
-#menu-icon {
-    font-size: 25px;
-    color: var(--black);
-    cursor: pointer;
-    display: none;
-}
-
 /* ------  Header   Ends  Here  ------ */
 
+.scroll-down header {
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+    filter: drop-shadow(0 -10px 20px #fff);
+}
 
 body {
     width: 100%;
     min-height: 100vh;
-    background-image: url("https://cdn.pixabay.com/photo/2015/07/05/13/44/beach-832346_1280.jpg");
-    background-repeat: repeat;
-    background-size: 1700px 700px;
 }
 
 .container {
@@ -141,6 +136,9 @@ body {
     justify-content: center;
     align-items: center;
     padding: 30px 8%;
+    background-image: url("https://cdn.pixabay.com/photo/2015/07/05/13/44/beach-832346_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container .row {
@@ -171,14 +169,14 @@ body {
 section.left .contactTitle h2 {
     position: relative;
     font-size: 55px;
-    color: #000;
+    color: var(--black);
     display: inline-block;
     margin-bottom: 5px;
 }
 
 section.left .contactTitle p {
     font-size: 17px;
-    color: #000;
+    color: var(--black);
     letter-spacing: 1px;
     line-height: 1.2;
     padding-bottom: 22px;
@@ -205,7 +203,7 @@ section.left .contactInfo {
 
 .iconGroup .icon i {
     font-size: 25px;
-    color: #000;
+    color: var(--text-grey);
     position: absolute;
     top: 50%;
     left: 70%;
@@ -215,7 +213,7 @@ section.left .contactInfo {
 .iconGroup .details span:nth-child(1) {
     font-size: 17px;
     font-weight: 450;
-    color: #000;
+    color: var(--black);
 
 }
 
@@ -252,7 +250,7 @@ section.left .contactInfo {
     width: 100%;
     font-size: 20px;
     padding: 2px 0px;
-    border: 0px solid #fff;
+    border: 0px solid var(--text-light);
     border-radius: 10px;
     height: 40px;
 }
@@ -268,7 +266,7 @@ textarea::-webkit-scrollbar {
 }
 
 textarea::-webkit-scrollbar-track {
-    background-color: #1e1e1e;
+    background-color: var(--text-grey);
     border-radius: 15px;
 }
 
@@ -303,7 +301,7 @@ textarea::-webkit-scrollbar-thumb {
 .inputGroup button {
     padding: 8px 16px;
     font-size: 18px;
-    background-color: dodgerblue;
+    background-color: var(--primary-color);
     color: #ffffff;
     border: 1px solid transparent;
     border-radius: 25px;
@@ -314,18 +312,34 @@ textarea::-webkit-scrollbar-thumb {
 
 .inputGroup button:hover {
     background-color: #8ce2f3d3;
-    color: dodgerblue;
+    color: var(--black);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid dodgerblue;
+    border: 1px solid var(--primary-color-light);
 }
 
 
 /* ------  Footer   ------ */
 
+.footer_container {
+    max-width: 1080px;
+    margin: auto;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
 .footer {
     background-color: #3f3e3e;
     padding: 20px 0;
-    width: 10000px;
+    width: 100vw;
 }
 
 .footer-col {
@@ -392,22 +406,15 @@ hr {
     height: auto;
 }
 
-
 .footer-background {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 5000px;
-    height: 100px;
-    /* Adjust as needed */
-    background-color: #3f3e3e;
-    /* Color of the footer */
-    z-index: -1;
-    /* Ensures the footer is behind other content */
+    height: 100px; /* Adjust as needed */
+    background-color: #3f3e3e; /* Color of the footer */
+    z-index: -1; /* Ensures the footer is behind other content */
 }
-
-
-/* ------  Footer End   ------ */
 
 @media (max-width:1440px) {
     header {
