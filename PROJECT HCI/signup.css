@@ -26,8 +26,22 @@ body {
     background: url(images/header.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    width: 100vw; /* Change to viewport width */
+    height: 100vh; /* Change to viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    background: url(images/header.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Ensure the background is behind the wrapper */
 }
 
 .wrapper {
@@ -43,15 +57,16 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: transform .5s ease, height .2 ease;
+    transition: transform .5s ease, height .2s ease;
+    z-index: 2; /* Ensure the wrapper is above the background */
 }
 
 .wrapper.active-popup {
     transform: scale(1);
 }
 
-.wrapper .active {
-    height: 520px;
+.wrapper .form-box.register.active {
+    height: 520px; /* Adjust the height as needed */
 }
 
 .wrapper .form-box {
