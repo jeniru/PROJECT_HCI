@@ -32,11 +32,21 @@ section{
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  position: relative;
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100vh;
 }
+
 
 header {
   position: fixed;
@@ -44,16 +54,28 @@ header {
   left: 0;
   width: 100%;
   padding: 20px 100px;
-  background: #ffffff2c;
+  background: #ffffff51;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 999;
 }
 
+/* Scroll Stuff */
+
+.scroll-down header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+  filter: drop-shadow(0 -10px 20px #fff);
+}
+
+/* End scroll stuff */
+
 .logo {
   font-size: 2rem;
-  color: var(--black);
+  color: var(--white);
   user-select: none;
 }
 
@@ -63,14 +85,13 @@ header {
   text-decoration: none;
 }
 .logo img{
-  width: 50px;
+  width: 60px;
   height: 50px;
 }
-
 .nav a {
   position: relative;
-  font-size: 2rem;
-  color: var(--black);
+  font-size: 20px;
+  color: var(--text-grey);
   text-decoration: none;
   font-weight: 500;
   margin-left: 40px;
@@ -95,7 +116,7 @@ header {
   transform: scalex(1);
 }
 
-.nav .btnLogin-popup {
+.btnLogin-popup {
   width: 130px;
   height: 50px;
   background: var(--primary-btn-color);
@@ -103,366 +124,286 @@ header {
   outline: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 18px;
   color: var(--text-light);
   font-weight: 500;
   margin-left: 40px;
   transition: .553
 }
 
-.nav .btnLogin-popup:hover {
-  background: var(--white);
+.btnLogin-popup a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.btnLogin-popup:hover {
+  background: #f6ff74;
   color: var(--primary-color);
 }
+/* MGA TITLE*/
 
-.booknow-button {
+.title h1{
+  margin-top: 30px;
+  margin-left: 17.5rem;
+  margin-bottom: 27px;
+  font-weight: 900;
+  font-size: 23px;
+}
+.titl3 h1{
+  margin-top: 90px;
+  margin-left: 18.5rem;
+  margin-bottom: 27px;
+  font-weight: 900;
+  font-size: 23px;
+}
 
-  background-color: #00B3FF; 
-  border: none;
-  color: rgb(0, 0, 0);
-  padding: 10px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.3rem;
-  margin: 30px 2px;
-  cursor: pointer;
-  border-radius: 20px;
-}
-/* ANDITO LAHAT*/
-.back-button {
-  background-color: rgb(255, 255, 255); 
-  padding: 10px 32px;
-  text-decoration: none; 
-  color: rgb(0, 0, 0);
-  margin-left: 130px;
-}
+/*  PACKAGE TOUR CONTAINER 1*/
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 0px 50px 0px 80px ;
-  margin-right: 80px;
+  padding: 0px 50px 50px 50px;
 }
-#calendar {
-  width: 200px;
-  height: 200px;
+.highlightblue{
+  color: #00B3FF;
 }
-input[type="date"],
-input[type="time"] {
-  padding: 9px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 200px;
-}
-.time-title{
-  margin-top: 20px;
-  margin-bottom: 1px;
-}
-#timeInput {
-  padding: 8px; /* Adjust padding as needed */
-  font-size: 16px; /* Adjust font size as needed */
-  border: 1px solid #ccc; /* Add border style */
-  border-radius: 4px; /* Add border radius for rounded corners */
-  margin-right: 150px; /* Add margin */
-  margin-bottom: 0.5px;
+.prices {
+  font-weight: 900;
+  font-size: 15px;
 }
 .tour{
-  width: 490px;
-  height: 600px;
+  width: 230px;
+  margin: 10px;
   border-radius: 15px;
+  transition: 1s;
 }
-.tour-1{
-  width: 500px;
-  height: 430px;
-  margin-bottom: 15px;
+
+.tour-image{
+  height: 280px;
+  margin-bottom: 10px;
+  align-items: center;
   background-size: cover;
-  border-radius: 10px 10px 10px 10px;
-  margin-left: 30px;
+  border-radius: 15px 15px 15px 15px; 
+  transition: 1s;
 }
-.tour-2{
-  height: 105px;
-  width: 158px;
-  background-size: cover;
-  border-radius: 10px 10px 10px 10px;
-  display: inline-block;
-  margin-right: 4.5px;
+.tour-image:hover{
+  transform: scale(1.1);
 }
-.tour-3{
-  height: 105px;
-  width: 158px;
-  background-size: cover;
-  border-radius: 10px 10px 10px 10px;
-  display: inline-block;
-  margin-left: 4.5px;
-}
-.tour-4{
-  height: 105px;
-  width: 158px;
-  background-size: cover;
-  border-radius: 10px 10px 10px 10px;
-  display: inline-block;
-  margin-left: 9.5px;
-}
-.threecontainers{
-  padding-left: 30px;
-  width: 600px;
-  
-}
+
+
 .tour-1{
   background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/02/The-Golden-Pavilion.-Kinkakuji-Temple-in-Kyoto-Japan.jpg')
 }
 .tour-2{
-  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4472_b479ff.jpg')
+  background-image: url('https://www.indianholiday.com/pictures/tourgallery/712/switzerland-and-paris-tour-7434.jpg')
 }
 .tour-3{
-  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4463_6e87f5.jpg')
+  background-image: url('https://www.holidify.com/images/bgImages/ROME.jpg')
 }
 .tour-4{
-  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4469_6dee66.jpg')
+  background-image: url('https://images.adsttc.com/media/images/5254/4190/e8e4/4eff/0200/06cf/slideshow/sfpassio.jpg?1381253501')
+}
+.tour-5{
+  background-image: url('https://media02.stockfood.com/largepreviews/MjIxNDU3OTM5NQ==/71438045-Golden-Chedi-Phrathatluang-of-the-Buddhist-temple-complex-Wat-Phra-Singh-at-dusk-Chiang-Mai-Thailand-Asia.jpg')
+}
+.tour-6{
+  background-image: url('https://media.ceetiz.com/activity/SEOSEO005/N-seoul-tower-memorial-guerre-coree-ceetiz.jpg')
+}
+.tour-7{
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Singapore_Skyline_2019-10.jpg')
+}
+.tour-8{
+  background-image: url('https://www.touropia.com/gfx/b/2019/09/lapland-1.jpg')
+}
+.tour h2 {
+  padding: 10px;
+}
+.tour p {
+  padding: 10px;
+  color: #00B3FF;
+}
+.tour a{
+  color: rgb(6, 135, 255);
+  padding: 10px;
+}
+.read-more {
+  color: #00B3FF;
+  cursor: pointer;
+  margin-left: 0.5px;
+  background-color: #ffffff;
+}
+.read-moore {
+  color: #00B3FF;
+  cursor: pointer;  
+  margin-left: 1px;
+  background-color: #ffffff;
 }
 
+/* Services CONTAINER2 */
 
-/* container Japan Tour1 */
-
-.tour1{
-  font-family: Roboto, Arial, sans-serif;
-  width: 490px;
-  height: 500px;
+.container2 { 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px 50px 80px 50px;
+}
+.services{
+  width: 320px;
+  margin: 10px;
   border-radius: 15px;
-  padding: 10px 10px 10px 10px;
-}
-.tour1 h1{
-  font-size: 40px;
-}
-.tour1 h2{
-  font-size: 23px;
-  margin-bottom: 18px;
-  margin-top: 12px;
-  font-weight:900;
-}
-.tour1 p{
-  font-size: 13px;
-  line-height: 0.7;
-  margin-bottom: 11px;
-  color: #bab8be;
-}
-.title h1{
-  padding: 50px 50px 0px 159px ;
-  margin-bottom: 15px;
-  font-weight:900;
-  font-size: 23px;
-}
-.detailsparagraph{
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 11px;
-  margin-left: 80px;
-}
-.iconss{
-  margin-left: 80px;
-}
-.container2 {
-  padding: 0px 50px 0px 80px ;
-  line-height: 2;
-}
-.container2 p{
-  font-size: 15px;
-}
-.details img{
-  height: 15px;
-  width: 15px;
-  margin-top: 8px;
 }
 
-/*Customer Section*/
-
-.containertwo {
-display: inline-block;
-width: 1500px;
-padding-top: 0px;
-height: 400px;
+.service-image{
+  height: 220px;
+  margin-bottom: 10px;
+  background-size: cover;
+  border-radius: 15px 15px 15px 15px;
+  transition: 1s;
+}
+.service-image:hover{
+  transform: scale(1.1);
 }
 
-.book-image{
+.service-1{
+  background-image: url('https://media.licdn.com/dms/image/C5612AQEpFavDU_pY-w/article-cover_image-shrink_600_2000/0/1632773082680?e=2147483647&v=beta&t=RW4wLrZZufPNqGDMnPqPg1pOW8Mnb4G1Kxd0mGfuHl0')
+}
+.service-2{
+  background-image: url('https://guidaviaggionline.it/wp-content/uploads/lucca-italia.jpg')
+}
+.service-3{
+  background-image: url('https://www.drinkbien.com/cdn/shop/files/carte-b-1.jpg?v=1695922097&width=750')
+}
+.service-4{
+  background-image: url('https://img.freepik.com/premium-photo/transport-tourism-road-trip-people-concept-group-happy-passengers-boarding-travel-bus_380164-138910.jpg?w=740')
+}
+.service-5{
+  background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSugiB1etjZhv3ySauNSNeBhUeTzvnmNcWJB3g0OkOhdgjBCfHd')
+}
+.service-6{
+  background-image: url('https://cdn.mos.cms.futurecdn.net/kQwELAJZc38Df6ewy7qkSZ-1024-80.jpg.webp')
+}
+
+.services h2 {
+  padding: 10px;
+}
+.services p {
+  padding: 10px;
+}
+.services a{
+  color: rgb(6, 135, 255);
+  padding: 10px;
+}
+
+/* BOOK now SECTION */
+
+.book-image {
+  background-image: url('https://i.ibb.co/BKgm8td/Screenshot-2024-04-25-015643.png');
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center; 
   height: 400px;
-  width: 1120px;
-  background-size: cover;
-  padding: 0px 50px 0px 80px ;
-}
-/* CUSTOMER PHOTOS*/
-
-.tourimages{
-  height: 360px;  
-  width: 800px;
-  display: inline-block;
-  margin-left: 2rem;
+  padding: 0px 50px 50px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
-.tourone {
-  width: 450px;
-  height: 360px;
-  background-size: cover;
-  display: inline-block;
-  float: left;
-  border-radius: 10px;
-}
-
-.tourtwo {
-  height: 170px;
-  width: 250px;
-  background-size: cover;
-  display: inline-block;
-  border-radius: 10px;
-  margin-left: 50px;
-  margin-bottom: 20px;
-  
-}
-.tourthree {
-  height: 170px;
-  width: 250px;
-  background-size: cover;
-  display: inline-block;
-  border-radius: 10px;
-  margin-left: 50px;
-  margin-bottom: 20px;
-  
-}
-
-
-.tourfour{
-  width: 300px;
-  height: 360px;
-  border-radius: 10px;
-  background-size: cover;
-  float: right;
-  margin-bottom: 200px;
-  margin-right: 12rem;
-}
-
-.tourone{
-  background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/02/The-Golden-Pavilion.-Kinkakuji-Temple-in-Kyoto-Japan.jpg')
-}
-.tourtwo{
-  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4472_b479ff.jpg')
-}
-.tourthree{
-  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4463_6e87f5.jpg')
-}
-.tourfour{
-  background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4469_6dee66.jpg')
+.book-1{
+  background-image: url('https://i.ibb.co/BKgm8td/Screenshot-2024-04-25-015643.png')
 }
 
 /* CUSTOMER SECTION CONTAINER3 */
 
 .happy h1{
-padding: 50px 50px 20px 16rem;
-font-weight:900;
-font-size: 24px;
+  padding: 50px 50px 20px 16rem;
+  font-weight:900;
+  font-size: 24px;
 }
 
 .container3 {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-padding: 19px 50px 90px 50px;   
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 19px 50px 90px 50px;   
 }
 .customer {
-border: 1px solid #e9ecec;
-height:300px;
-width: 500px;
-margin: 10px;
-border-radius: 20px;  
-align-items: center;
+  border: 1px solid #e9ecec;
+  height:300px;
+  width: 500px;
+  margin: 10px;
+  border-radius: 20px;  
+  align-items: center;
+  
 }
 
 .customer-image{
-margin-top: 20px;
-margin-left: 22rem;
-height: 60px;
-width: 60px;
-background-size: cover;
-border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 22rem;
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+  border-radius: 50%;
 }
 .customer-1{
-background-image: url('https://i.pinimg.com/originals/cc/56/e9/cc56e94b4c5a40605f3f016cf448cce5.jpg ')
+  background-image: url('https://i.pinimg.com/originals/cc/56/e9/cc56e94b4c5a40605f3f016cf448cce5.jpg ')
 }
 .customer-2{
-background-image: url('https://i.pinimg.com/originals/11/91/be/1191be158f7a6c36540f2f576abd3596.jpg')
+  background-image: url('https://i.pinimg.com/originals/11/91/be/1191be158f7a6c36540f2f576abd3596.jpg')
 }
 
 .customer h1 {
-font-weight: bold;
-margin-top: 10px;
-margin-left: 21rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 21rem;
 }
 .customer h2 {
-margin-top: 18px;
-justify-content: center;
-font-weight: lighter;
-padding: 10px;
+  margin-top: 18px;
+  justify-content: center;
+  color: #000;
+  padding: 10px;
+<<<<<<< HEAD
+
+=======
+  font-weight: normal;
+>>>>>>> fff0dc02042253cd9a6b36a5ed8ecca29fbe4a56
 }
 .customer a{
-color: rgb(6, 135, 255);
-padding: 10px;
-}
-.highlightblue{
-color:#00B3FF
-}
-.price {
-font-size: 24px;
-font-weight: 700;
-font-style: normal;
-}
-.bold{
-font-weight: bold;
+  color: rgb(6, 135, 255);
+  padding: 10px;
 }
 
+/*ICONS*/
 
 .tour img{
-height: 10px;
-width: 10px;
-margin-right: 5px;
+  height: 10px;
+  width: 10px;
+  margin-right: 5px;
 }
 
 .tour-details {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .happy{
-margin-top: 27px;
-margin-bottom: 0.5px;
+  margin-top: 27px;
+  margin-bottom: 0.5px;
 }
-.happy img {
-height: 30px;
-width: 30px;
-margin-left: 5px; /* Adjust the margin as needed */
-float: right; /* Float the images to the right */
-}
-
-.blue-background {
-border-radius: 100%; 
-background-color: #00B3FF;
-}
-.gray-background{
-border-radius: 100%; 
-background-color: #c9caca;
-}
-
 
 .fade-in {
-opacity: 0;
-animation: fadeInAnimation 2s ease-in forwards;
+  opacity: 0;
+  animation: fadeInAnimation ease 2s forwards;
 }
 
 @keyframes fadeInAnimation {
-from {
-    opacity: 0;
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
-to {
-    opacity: 1;
-}
-}
+
+
 /* ------  Footer   ------ */
 
 .footer_container {
@@ -482,6 +423,7 @@ ul {
 .footer {
   background-color: #3f3e3e;
   padding: 20px 0;
+  width: 10000px;
 }
 
 .footer-col {
@@ -546,6 +488,17 @@ hr {
   display: flex;
   width: 50px;
   height: auto;
+}
+
+
+.footer-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 5000px;
+  height: 100px; /* Adjust as needed */
+  background-color: #3f3e3e; /* Color of the footer */
+  z-index: -1; /* Ensures the footer is behind other content */
 }
 
 /* ------  Footer End   ------ */
@@ -707,3 +660,6 @@ hr {
       margin: 0px;
   }
 }
+
+
+

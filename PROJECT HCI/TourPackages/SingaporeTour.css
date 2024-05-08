@@ -32,15 +32,6 @@ section{
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: auto;
-  flex-wrap: wrap;
-  position: relative;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -62,7 +53,7 @@ header {
 
 .logo {
   font-size: 2rem;
-  color: black;
+  color: var(--black);
   user-select: none;
 }
 
@@ -72,13 +63,14 @@ header {
   text-decoration: none;
 }
 .logo img{
-  width: 60px;
+  width: 50px;
   height: 50px;
 }
+
 .nav a {
   position: relative;
-  font-size: 1.7rem;
-  color: black;
+  font-size: 2rem;
+  color: var(--black);
   text-decoration: none;
   font-weight: 500;
   margin-left: 40px;
@@ -103,7 +95,7 @@ header {
   transform: scalex(1);
 }
 
-.btnLogin-popup {
+.nav .btnLogin-popup {
   width: 130px;
   height: 50px;
   background: var(--primary-btn-color);
@@ -111,193 +103,268 @@ header {
   outline: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   color: var(--text-light);
   font-weight: 500;
   margin-left: 40px;
   transition: .553
 }
 
-.btnLogin-popup a {
-  text-decoration: none;
-  color: var(--text-dark);
-}
-
-.btnLogin-popup:hover {
+.nav .btnLogin-popup:hover {
   background: var(--white);
   color: var(--primary-color);
 }
-/* MGA TITLE*/
 
-.title h1{
-  margin-top: 30px;
-  margin-left: 17.5rem;
-  margin-bottom: 27px;
-  font-weight: 900;
-  font-size: 23px;
-}
-.titl3 h1{
-  margin-top: 90px;
-  margin-left: 18.5rem;
-  margin-bottom: 27px;
-  font-weight: 900;
-  font-size: 23px;
-}
+.booknow-button a{
 
-/*  PACKAGE TOUR CONTAINER 1*/
-.container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0px 50px 50px 50px;
-}
-.highlightblue{
-  color: #00B3FF;
-}
-.prices {
-  font-weight: 900;
-  font-size: 15px;
-}
-.tour{
-  width: 230px;
-  margin: 10px;
-  border-radius: 15px;
-  transition: 1s;
-}
-
-.tour-image{
-  height: 280px;
-  margin-bottom: 10px;
-  align-items: center;
-  background-size: cover;
-  border-radius: 15px 15px 15px 15px; 
-  transition: 1s;
-}
-.tour-image:hover{
-  transform: scale(1.1);
-}
-
-
-.tour-1{
-  background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/02/The-Golden-Pavilion.-Kinkakuji-Temple-in-Kyoto-Japan.jpg')
-}
-.tour-2{
-  background-image: url('https://www.indianholiday.com/pictures/tourgallery/712/switzerland-and-paris-tour-7434.jpg')
-}
-.tour-3{
-  background-image: url('https://www.holidify.com/images/bgImages/ROME.jpg')
-}
-.tour-4{
-  background-image: url('https://images.adsttc.com/media/images/5254/4190/e8e4/4eff/0200/06cf/slideshow/sfpassio.jpg?1381253501')
-}
-.tour-5{
-  background-image: url('https://media02.stockfood.com/largepreviews/MjIxNDU3OTM5NQ==/71438045-Golden-Chedi-Phrathatluang-of-the-Buddhist-temple-complex-Wat-Phra-Singh-at-dusk-Chiang-Mai-Thailand-Asia.jpg')
-}
-.tour-6{
-  background-image: url('https://media.ceetiz.com/activity/SEOSEO005/N-seoul-tower-memorial-guerre-coree-ceetiz.jpg')
-}
-.tour-7{
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Singapore_Skyline_2019-10.jpg')
-}
-.tour-8{
-  background-image: url('https://www.touropia.com/gfx/b/2019/09/lapland-1.jpg')
-}
-.tour h2 {
-  padding: 10px;
-}
-.tour p {
-  padding: 10px;
-  color: #00B3FF;
-}
-.tour a{
-  color: rgb(6, 135, 255);
-  padding: 10px;
-}
-.read-more {
-  color: #00B3FF;
+  background-color: #00B3FF; 
+  border: #4cc9ff solid 2px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 32px;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.3rem;
+  margin: 30px 2px;
   cursor: pointer;
-  margin-left: 0.5px;
-  background-color: #ffffff;
+  border-radius: 20px;
+  font-weight: bold;
 }
-.read-moore {
+
+.booknow-button a:hover{
+
+  background-color: #ffffff; 
   color: #00B3FF;
-  cursor: pointer;  
-  margin-left: 1px;
+  border: #4cc9ff solid 2px;
+}
+
+.booknow-button{
   background-color: #ffffff;
 }
+/* ANDITO LAHAT*/
+.back-button {
+    background-color: rgb(255, 255, 255); 
+    padding: 10px 32px;
+    text-decoration: none; 
+    color: rgb(0, 0, 0);
+    margin-left: 130px;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0px 50px 0px 80px ;
+    margin-right: 80px;
+  }
+  #calendar {
+    width: 200px;
+    height: 200px;
+  }
+  input[type="date"],
+  input[type="time"] {
+    padding: 9px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+  .time-title{
+    margin-top: 20px;
+    margin-bottom: 1px;
+  }
+  #timeInput {
+    padding: 8px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    border: 1px solid #ccc; /* Add border style */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    margin-right: 150px; /* Add margin */
+    margin-bottom: 0.5px;
+  }
+  .tour{
+    width: 490px;
+    height: 600px;
+    border-radius: 15px;
+  }
+  .tour-1{
+    width: 500px;
+    height: 430px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 30px;
+  }
+  .tour-2{
+    height: 105px;
+    width: 158px;
+    background-size: cover;
+    border-radius: 10px 10px 10px 10px;
+    display: inline-block;
+    margin-right: 4.5px;
+  }
+  .tour-3{
+    height: 105px;
+    width: 158px;
+    background-size: cover;
+    border-radius: 10px 10px 10px 10px;
+    display: inline-block;
+    margin-left: 4.5px;
+  }
+  .tour-4{
+    height: 105px;
+    width: 158px;
+    background-size: cover;
+    border-radius: 10px 10px 10px 10px;
+    display: inline-block;
+    margin-left: 9.5px;
+  }
+  .threecontainers{
+    padding-left: 30px;
+    width: 600px;
+    
+  }
+  .tour-1{
+    background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/02/The-Golden-Pavilion.-Kinkakuji-Temple-in-Kyoto-Japan.jpg')
+  }
+  .tour-2{
+    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4472_b479ff.jpg')
+  }
+  .tour-3{
+    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4463_6e87f5.jpg')
+  }
+  .tour-4{
+    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4469_6dee66.jpg')
+  }
 
-/* Services CONTAINER2 */
 
-.container2 { 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0px 50px 80px 50px;
-}
-.services{
-  width: 320px;
-  margin: 10px;
-  border-radius: 15px;
-}
+  /* container Japan Tour1 */
 
-.service-image{
-  height: 220px;
-  margin-bottom: 10px;
-  background-size: cover;
-  border-radius: 15px 15px 15px 15px;
-  transition: 1s;
-}
-.service-image:hover{
-  transform: scale(1.1);
-}
+  .tour1{
+    font-family: Roboto, Arial, sans-serif;
+    width: 490px;
+    height: 500px;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px;
+  }
+  .tour1 h1{
+    font-size: 40px;
+  }
+  .tour1 h2{
+    font-size: 23px;
+    margin-bottom: 18px;
+    margin-top: 12px;
+    font-weight:900;
+  }
+  .tour1 p{
+    font-size: 13px;
+    line-height: 0.7;
+    margin-bottom: 11px;
+    color: #bab8be;
+  }
+  .title h1{
+    padding: 50px 50px 0px 159px ;
+    margin-bottom: 15px;
+    font-weight:900;
+    font-size: 23px;
+  }
+  .detailsparagraph{
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 11px;
+    margin-left: 80px;
+  }
+  .iconss{
+    margin-left: 80px;
+  }
+  .container2 {
+    padding: 0px 50px 0px 80px ;
+    line-height: 2;
+  }
+  .container2 p{
+    font-size: 15px;
+  }
+  .details img{
+    height: 15px;
+    width: 15px;
+    margin-top: 8px;
+  }
 
-.service-1{
-  background-image: url('https://media.licdn.com/dms/image/C5612AQEpFavDU_pY-w/article-cover_image-shrink_600_2000/0/1632773082680?e=2147483647&v=beta&t=RW4wLrZZufPNqGDMnPqPg1pOW8Mnb4G1Kxd0mGfuHl0')
-}
-.service-2{
-  background-image: url('https://guidaviaggionline.it/wp-content/uploads/lucca-italia.jpg')
-}
-.service-3{
-  background-image: url('https://www.drinkbien.com/cdn/shop/files/carte-b-1.jpg?v=1695922097&width=750')
-}
-.service-4{
-  background-image: url('https://img.freepik.com/premium-photo/transport-tourism-road-trip-people-concept-group-happy-passengers-boarding-travel-bus_380164-138910.jpg?w=740')
-}
-.service-5{
-  background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSugiB1etjZhv3ySauNSNeBhUeTzvnmNcWJB3g0OkOhdgjBCfHd')
-}
-.service-6{
-  background-image: url('https://cdn.mos.cms.futurecdn.net/kQwELAJZc38Df6ewy7qkSZ-1024-80.jpg.webp')
-}
+/*Customer Section*/
 
-.services h2 {
-  padding: 10px;
-}
-.services p {
-  padding: 10px;
-}
-.services a{
-  color: rgb(6, 135, 255);
-  padding: 10px;
-}
-
-/* BOOK now SECTION */
-
-.book-image {
-  background-image: url('https://i.ibb.co/BKgm8td/Screenshot-2024-04-25-015643.png');
-  background-size: cover;
-  background-repeat: no-repeat; 
-  background-position: center; 
+.containertwo {
+  display: inline-block;
+  width: 1500px;
+  padding-top: 0px;
   height: 400px;
-  padding: 0px 50px 50px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
 }
 
-.book-1{
-  background-image: url('https://i.ibb.co/BKgm8td/Screenshot-2024-04-25-015643.png')
-}
+.book-image{
+    height: 400px;
+    width: 1120px;
+    background-size: cover;
+    padding: 0px 50px 0px 80px ;
+  }
+  /* CUSTOMER PHOTOS*/
+
+  .tourimages{
+    height: 360px;  
+    width: 800px;
+    display: inline-block;
+    margin-left: 2rem;
+  }
+
+  .tourone {
+    width: 450px;
+    height: 360px;
+    background-size: cover;
+    display: inline-block;
+    float: left;
+    border-radius: 10px;
+  }
+  
+  .tourtwo {
+    height: 170px;
+    width: 250px;
+    background-size: cover;
+    display: inline-block;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    
+  }
+  .tourthree {
+    height: 170px;
+    width: 250px;
+    background-size: cover;
+    display: inline-block;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    
+  }
+
+
+  .tourfour{
+    width: 300px;
+    height: 360px;
+    border-radius: 10px;
+    background-size: cover;
+    float: right;
+    margin-bottom: 200px;
+    margin-right: 12rem;
+  }
+
+  .tourone{
+    background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/02/The-Golden-Pavilion.-Kinkakuji-Temple-in-Kyoto-Japan.jpg')
+  }
+  .tourtwo{
+    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4472_b479ff.jpg')
+  }
+  .tourthree{
+    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4463_6e87f5.jpg')
+  }
+  .tourfour{
+    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4469_6dee66.jpg')
+  }
 
 /* CUSTOMER SECTION CONTAINER3 */
 
@@ -347,14 +414,23 @@ header {
   justify-content: center;
   font-weight: lighter;
   padding: 10px;
-
 }
 .customer a{
   color: rgb(6, 135, 255);
   padding: 10px;
 }
+.highlightblue{
+  color:#00B3FF
+}
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+}
+.bold{
+  font-weight: bold;
+}
 
-/*ICONS*/
 
 .tour img{
   height: 10px;
@@ -386,20 +462,20 @@ header {
   background-color: #c9caca;
 }
 
+
 .fade-in {
   opacity: 0;
-  animation: fadeInAnimation ease 2s forwards;
+  animation: fadeInAnimation 2s ease-in forwards;
 }
 
 @keyframes fadeInAnimation {
-  0% {
+  from {
       opacity: 0;
   }
-  100% {
+  to {
       opacity: 1;
   }
 }
-
 
 /* ------  Footer   ------ */
 
@@ -420,7 +496,6 @@ ul {
 .footer {
   background-color: #3f3e3e;
   padding: 20px 0;
-  width: 10000px;
 }
 
 .footer-col {
@@ -485,17 +560,6 @@ hr {
   display: flex;
   width: 50px;
   height: auto;
-}
-
-
-.footer-background {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 5000px;
-  height: 100px; /* Adjust as needed */
-  background-color: #3f3e3e; /* Color of the footer */
-  z-index: -1; /* Ensures the footer is behind other content */
 }
 
 /* ------  Footer End   ------ */
@@ -657,6 +721,3 @@ hr {
       margin: 0px;
   }
 }
-
-
-

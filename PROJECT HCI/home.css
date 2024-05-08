@@ -39,12 +39,24 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    background: #ffffff2c;
+    background: #ffffff51;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 999;
 }
+
+/* Scroll Stuff */
+
+.scroll-down header {
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+    filter: drop-shadow(0 -10px 20px #fff);
+}
+
+/* End scroll stuff */
 
 .logo {
     font-size: 2rem;
@@ -75,11 +87,10 @@ header {
     min-height: 100vh;
 }
 
-
 .nav a {
     position: relative;
-    font-size: 1.1rem;
-    color: var(--white);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
@@ -129,23 +140,23 @@ header {
     color: var(--primary-color);
 }
 
-.container_tagline {
+ .container_tagline {
     padding-block: 10rem 15rem;
 }
 
-.container_tagline p{
+.container_tagline p {
     margin-bottom: 4rem;
-    font-size: 1.2rem;
+    font-size: 20px;
     color: #333333b0;
     text-align: center;
 }
 
-.container_tagline h1 {
+.container_tagline h2 {
     margin: auto;
-    font-size: 4rem;
+    font-size: 40px;
     font-weight: 500;
-    line-height: 4.5rem;
-    color: var(--text-light);
+    line-height: 3.5rem;
+    color: var(--white);
     text-align: center;
 }
 
@@ -173,14 +184,14 @@ header {
     border-radius: 50px;
     background-color: #fff;
     overflow: hidden;
-    max-width: 400px;
+    max-width: 600px;
     box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.273);
 }
 
 #search{
-    border:none;
-    width:350px;
-    font-size: 15px;
+    border: none;
+    width: 450px;
+    font-size: 18px;
 }
 
 #search:focus{
@@ -193,10 +204,10 @@ header {
 }
 
 #search-button{
-    border:none;
+    border: none;
     cursor: pointer;
-    color:#fff;
-    background-color:#1dbf73;
+    color: var(--text-light);
+    background-color: var(--primary-btn-color);
     padding:0px 10px;
 }
 
@@ -390,7 +401,7 @@ header {
 
 .container-2 {
     height: 350px;
-    width: 100%;
+    width: 100vw;
     background-size: cover;
     background-image: linear-gradient(to right, #18c8dfdb , #30A3E4, #87CAF0);
     display: flex;

@@ -4,90 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Website</title>
-    <link rel="stylesheet" href="Romebook.css">
+    <link rel="stylesheet" href="Japanbook3.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
-        <h1><a href="#" class="logo"><img src="images/logo.png" alt="Wander Bros. Logo">Wander</a></h1>
+        <h1><a href="#" class="logo"><img src="images/wanderlogo.png" alt="Wander Bros. Logo">Wander</a></h1>
         <nav class="nav">
-            <a href="index.html">Home</a>
+            <a href="home.html">Home</a>
             <a href="ABOUTUS.HTML">About Us</a>
             <a href="hciPROJECT.html">Tour Packages</a>
             <a href="contactus.html">Contact Us</a>
-            <button class="btnLogin-popup">Login</button>
         </nav>
+        <button class="btnLogin-popup"><a href="signup.html">Login</a></button>
     </header>
-
     <main>
-        <section class="booking-container">
-            <div class="step active">Booking Details</div>
-            <div class="step2">Your Details</div>
-            <div class="step3">Payment</div>
+        <section class="booking-container ">
+            <div class="step2">Booking Details</div>
+            <div class="step3">Your Details</div>
+            <div class="step active">Payment</div>
         </section>
         <section class="container slide-right">
             <div class="visit">
                 <div class="title">
-                    <h1>When will you visit?</h1>
+                    <h1>Select a Payment Method</h1>
                 </div>
-                <input type="date" id="dateInput" name="dateInput">
-                <div class="title">
-                    <h1>What time?</h1>
-                </div>
-                <input type="time" id="timeInput" name="timeInput">
-                <div class="title">
-                    <h1>Select Your Tickets</h1>
-                    <p>
-                        <li class="first">Free for kids under 6 and disabled visitors (74%+)</li>
-                        <li class="second">Pregnant women, families with strollers, and visitors on crutches can buy priority tickets at the venue</li>
-                    </p>
-                </div>
-                <div class="input-container">
-                    <div class="ticket-types">
-                        <div class="ticket">
-                            <p>Adult (18+)
-                                <div class="quantity-control">
-                                    <button class="decrease">-</button>
-                                    <input type="number" value="0" class="quantity-adult">
-                                    <button class="increase">+</button>
-                                </div>
-                            </p>
-                            <p><span class="blue">€34.00</span></p>
-                            
+                <form action="#">
+                    <div class="payment-method">
+                        <input type="radio" id="paypal" name="payment" checked>
+                        <label for="paypal"> PayPal</label>
+                        <p> You will be redirected to the Paypal website after submitting your order<img src="https://th.bing.com/th/id/R.fca76a9d27c54d07ba8c567cb3e2fe1d?rik=vJ%2fFvc7xLxNcEg&riu=http%3a%2f%2ftous-logos.com%2fwp-content%2fuploads%2f2017%2f09%2fPaypal-logo.jpg&ehk=Jf3VB7bWFm1sjKT%2bWcnvnB0PvjQJsJRK%2bAhPWwhR0NE%3d&risl=&pid=ImgRaw&r=0" alt="PayPal Logo"></p>  
                         </div>
-                        <div class="ticket">
-                            <p>Child (6-17)</p>
-                            
-                            <p>With valid ID</p>
-                            <p>Only in combination with: Adult (18+)
-                                <div class="quantity-control">
-                                    <button class="decrease">-</button>
-                                    <input type="number" value="0" class="quantity-child">
-                                    <button class="increase">+</button>
-                                </div>
-                            </p>
-                            <p><span class="blue">€22.00</span></p>
-                        </div>
-                        <div class="ticket">
-                            <p>Infant (0-5)</p>
-                            <p>Only in combination with: Adult (18+)
-                                <div class="quantity-control">
-                                    <button class="decrease">-</button>
-                                    <input type="number" value="0" class="quantity-infant">
-                                    <button class="increase">+</button>
-                                </div>
-                            </p>
-                            
-                            <p><Span class="blue">FREE</Span></p>
+                    <div class="payment-method">
+                        <input type="radio" id="credit-card" name="payment">
+                        <label for="credit-card">Pay with Credit Card</label>
+                        <span class="credits">
+                            <div class="visa">
+                            <img src="https://th.bing.com/th/id/OIP.xVREsbEnxpFwYsgl4hNO7QHaDA?rs=1&pid=ImgDetMain">
+                            </div>
+                            <img src="https://th.bing.com/th/id/OIP.ruwJCwSFzckVyunkFHmK9AAAAA?rs=1&pid=ImgDetMain">
+                            <img src="https://th.bing.com/th/id/OIP.R9U_JABl7Ic60T5SoZpIKwHaHa?rs=1&pid=ImgDetMain">
+                            <img src="https://s3.amazonaws.com/freebiesupply/large/2x/mastercard-logo-png-transparent.png">
+                                
+                        </span>
+                        <div class="card-details">
+                            <input type="text" id="card-number" name="card-number" placeholder="Card number">
+                            <input type="text" id="expiration-date" name="expiration-date" placeholder="Expiration Date">
+                            <input type="text" id="security-code" name="security-code" placeholder="Card Security Code">
+                            <div class="card-what">
+                            <p>What is this?</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
-
             <div class="tickets">
                 <div class="content">
                     <div class="overview">
-                        <h1>Your Tickets Overview</h1>  
+                        <h1>Your Ticket Overview</h1>  
                     </div>
                     <div class="ticketoverview">
                         <div class="ticket-image ticket-1"></div>
@@ -117,31 +91,9 @@
             
         </section>
     </main>
-    <script>
-        // JavaScript to handle quantity control
-        document.querySelectorAll('.quantity-control').forEach(control => {
-            const decreaseBtn = control.querySelector('.decrease');
-            const increaseBtn = control.querySelector('.increase');
-            const quantityInput = control.querySelector('input[type="number"]');
-
-            decreaseBtn.addEventListener('click', () => {
-                let currentValue = parseInt(quantityInput.value);
-                if (currentValue > 0) {
-                    quantityInput.value = currentValue - 1;
-                }
-            });
-
-            increaseBtn.addEventListener('click', () => {
-                let currentValue = parseInt(quantityInput.value);
-                quantityInput.value = currentValue + 1;
-            });
-        });
-
-    </script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="Romebook.js"></script>
+    <script src="Japanbook3.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <footer class="footer fade-in">
         <div class="footer_container">
             <div class="footer_logo">
@@ -207,6 +159,34 @@
     </footer>
 
     <!-- ******* Footer End ******* -->
+    <script>
+
+        const body = document.body;
+        let lastScroll = 0;
+
+        window.addEventListener ('scroll', () => {
+            const currentScroll = window.pageYOffset 
+
+            if (currentScroll <= 0) {
+            body.classList.remove("scroll-up")
+            }
+
+            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+            body.classList.remove("scroll-up")
+            body.classList.add("scroll-down")
+            }
+
+            if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+            body.classList.remove("scroll-down")
+            body.classList.add("scroll-up")
+            }
+
+            lastScroll = currentScroll;
+
+        })
+
+    </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
             const sections = document.querySelectorAll('.fade-in');
