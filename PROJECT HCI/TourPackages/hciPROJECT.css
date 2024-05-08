@@ -452,6 +452,7 @@ header {
   display: wrap;
   justify-content: space-around;
   margin-left: 5px;
+  border-radius: 10px;
 }
 
 .engagements {

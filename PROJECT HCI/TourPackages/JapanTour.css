@@ -64,7 +64,7 @@ header {
 
 .logo {
   font-size: 2rem;
-  color: black;
+  color: var(--white);
   user-select: none;
 }
 
@@ -443,6 +443,7 @@ header {
   display: wrap;
   justify-content: space-around;
   margin-left: 5px;
+  border-radius: 10px;
 }
 
 .engagements {
