@@ -130,6 +130,34 @@ header {
   color: var(--primary-color);
 }
 
+.booknow-button a{
+
+  background-color: #00B3FF; 
+  border: #4cc9ff solid 2px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 32px;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.3rem;
+  margin: 30px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.booknow-button a:hover{
+
+  background-color: #ffffff; 
+  color: #00B3FF;
+  border: #4cc9ff solid 2px;
+}
+
+.booknow-button{
+  background-color: #ffffff;
+}
+
 /* ANDITO LAHAT*/
 .back-button {
     background-color: rgb(255, 255, 255); 
