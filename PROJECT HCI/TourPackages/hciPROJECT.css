@@ -313,64 +313,165 @@ header {
   background-image: url('https://i.ibb.co/BKgm8td/Screenshot-2024-04-25-015643.png')
 }
 
-/* CUSTOMER SECTION CONTAINER3 */
+/*Customer Section*/
 
-.happy h1{
-  padding: 50px 50px 20px 16rem;
-  font-weight:900;
-  font-size: 24px;
-}
-
-.container3 {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 19px 50px 90px 50px;   
-}
 .customer {
-  border: 1px solid #e9ecec;
-  height:300px;
-  width: 500px;
-  margin: 10px;
-  border-radius: 20px;  
-  align-items: center;
+  display: flex;
+  align-items:center;
+  padding-top: 0px;
+  padding-left: 16rem;
+}
+
+.containertwo {
+  background: #fff;
+  padding: 20px;
+  font-family: monospace;
+  width: 100%;
   
 }
+.head{
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
 
-.customer-image{
-  margin-top: 20px;
-  margin-left: 22rem;
-  height: 60px;
-  width: 60px;
-  background-size: cover;
+.text {
+  margin: 10px 0;
+  font-family: sans-serif;
+  font-size: 0.9em;
+}
+
+.commentbox {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.commentbox > img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center;
 }
-.customer-1{
-  background-image: url('https://i.pinimg.com/originals/cc/56/e9/cc56e94b4c5a40605f3f016cf448cce5.jpg ')
+.content{
+  width: 100%;
 }
-.customer-2{
-  background-image: url('https://i.pinimg.com/originals/11/91/be/1191be158f7a6c36540f2f576abd3596.jpg')
+.user {
+  border: none;
+  outline: none;
+  margin: 5px 0;
+  color: #808080;
+  margin-left: 20px;
+  padding: 10px;
+}
+.commentinput > input {
+  border: none;
+  padding: 10px;
+  padding-left: 0;
+  outline: none;
+  border-bottom: 2px solid #00B3FF;
+  margin-bottom: 10px;
+  width: 95%;
 }
 
-.customer h1 {
-  font-weight: bold;
-  margin-top: 10px;
-  margin-left: 21rem;
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #808080;
 }
-.customer h2 {
-  margin-top: 18px;
-  justify-content: center;
-  color: #000;
-  padding: 10px;
-<<<<<<< HEAD
 
-=======
-  font-weight: normal;
->>>>>>> fff0dc02042253cd9a6b36a5ed8ecca29fbe4a56
+.buttons button.disabled {
+  padding: 5px 10px;
+  background: lightgray;
+  color: #808080;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+
 }
-.customer a{
-  color: rgb(6, 135, 255);
-  padding: 10px;
+
+.buttons button.abled {
+  background: #00B3FF;
+  color: #fff;
+  border-radius: 10px;
+  width: 10%;
+}
+
+.policy {
+  margin: 20px 0;
+  font-size: 0.8 rem;
+  font-family: Arial, sans-serif;
+  color: #808080;
+}
+
+.policy a {
+  text-decoration: none;
+  color: blue;
+}
+
+.notify {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.notify >input {
+  margin-right: 5px;
+}
+
+.parents {
+  font-family: Arial, Sans-serif;
+  display: flex;
+  margin-bottom: 30px;
+}
+.parents h1 {
+  font-size: 0.9em;
+}
+
+.parents p {
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.parents > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 2rem;
+}
+
+.attach img {
+  width: 200px;
+  height: 200px;
+  display: wrap;
+  justify-content: space-around;
+  margin-left: 5px;
+}
+
+.engagements {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.engagements img{
+  width: 10px;
+}
+
+.engagements img:nth-child(1) {
+  margin-right: 10px;
+  width: 10px;
+}
+
+.date {
+  color: #808080;
+  font-size: 0.8em;
 }
 
 /*ICONS*/
@@ -384,10 +485,6 @@ header {
 .tour-details {
   display: flex;
   justify-content: space-between;
-}
-.happy{
-  margin-top: 27px;
-  margin-bottom: 0.5px;
 }
 
 .fade-in {
