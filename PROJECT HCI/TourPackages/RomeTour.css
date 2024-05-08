@@ -37,23 +37,34 @@ body {
   width: 100%;
   height: 100vh;
 }
-
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px 100px;
-  background: #ffffff2c;
+  background: #ffffff51;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 999;
 }
 
+/* Scroll Stuff */
+
+.scroll-down header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+  filter: drop-shadow(0 -10px 20px #fff);
+}
+
+/* End scroll stuff */
+
 .logo {
   font-size: 2rem;
-  color: var(--black);
+  color: var(--white);
   user-select: none;
 }
 
@@ -63,14 +74,13 @@ header {
   text-decoration: none;
 }
 .logo img{
-  width: 50px;
+  width: 60px;
   height: 50px;
 }
-
 .nav a {
   position: relative;
-  font-size: 2rem;
-  color: var(--black);
+  font-size: 20px;
+  color: var(--text-grey);
   text-decoration: none;
   font-weight: 500;
   margin-left: 40px;
@@ -95,7 +105,7 @@ header {
   transform: scalex(1);
 }
 
-.nav .btnLogin-popup {
+.btnLogin-popup {
   width: 130px;
   height: 50px;
   background: var(--primary-btn-color);
@@ -103,15 +113,20 @@ header {
   outline: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 18px;
   color: var(--text-light);
   font-weight: 500;
   margin-left: 40px;
   transition: .553
 }
 
-.nav .btnLogin-popup:hover {
-  background: var(--white);
+.btnLogin-popup a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.btnLogin-popup:hover {
+  background: #f6ff74;
   color: var(--primary-color);
 }
 
@@ -142,6 +157,7 @@ header {
 .booknow-button{
   background-color: #ffffff;
 }
+
 /* ANDITO LAHAT*/
 .back-button {
     background-color: rgb(255, 255, 255); 
@@ -256,7 +272,7 @@ header {
   }
   .tour1 p{
     font-size: 13px;
-    line-height: 0.7;
+    line-height: 1;
     margin-bottom: 11px;
     color: #bab8be;
   }
@@ -290,178 +306,165 @@ header {
 
 /*Customer Section*/
 
-.containertwo {
-  display: inline-block;
-  width: 1500px;
-  padding-top: 0px;
-  height: 400px;
-}
-
-.book-image{
-    height: 400px;
-    width: 1120px;
-    background-size: cover;
-    padding: 0px 50px 0px 80px ;
-  }
-  /* CUSTOMER PHOTOS*/
-
-  .tourimages{
-    height: 360px;  
-    width: 800px;
-    display: inline-block;
-    margin-left: 2rem;
-  }
-
-  .tourone {
-    width: 450px;
-    height: 360px;
-    background-size: cover;
-    display: inline-block;
-    float: left;
-    border-radius: 10px;
-  }
-  
-  .tourtwo {
-    height: 170px;
-    width: 250px;
-    background-size: cover;
-    display: inline-block;
-    border-radius: 10px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-    
-  }
-  .tourthree {
-    height: 170px;
-    width: 250px;
-    background-size: cover;
-    display: inline-block;
-    border-radius: 10px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-    
-  }
-
-
-  .tourfour{
-    width: 300px;
-    height: 360px;
-    border-radius: 10px;
-    background-size: cover;
-    float: right;
-    margin-bottom: 200px;
-    margin-right: 12rem;
-  }
-
-  .tourone{
-    background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/02/The-Golden-Pavilion.-Kinkakuji-Temple-in-Kyoto-Japan.jpg')
-  }
-  .tourtwo{
-    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4472_b479ff.jpg')
-  }
-  .tourthree{
-    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4463_6e87f5.jpg')
-  }
-  .tourfour{
-    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4469_6dee66.jpg')
-  }
-
-/* CUSTOMER SECTION CONTAINER3 */
-
-.happy h1{
-  padding: 50px 50px 20px 16rem;
-  font-weight:900;
-  font-size: 24px;
-}
-
-.container3 {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 19px 50px 90px 50px;   
-}
 .customer {
-  border: 1px solid #e9ecec;
-  height:300px;
-  width: 500px;
-  margin: 10px;
-  border-radius: 20px;  
+  display: flex;
+  align-items:center;
+  padding-top: 0px;
+  padding-left: 16rem;
+}
+
+.containertwo {
+  background: #fff;
+  padding: 20px;
+  font-family: monospace;
+  width: 100%;
+  
+}
+.head{
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.text {
+  margin: 10px 0;
+  font-family: sans-serif;
+  font-size: 0.9em;
+}
+
+.commentbox {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.commentbox > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+.content{
+  width: 100%;
+}
+.user {
+  border: none;
+  outline: none;
+  margin: 5px 0;
+  color: #808080;
+  margin-left: 20px;
+  padding: 10px;
+}
+.commentinput > input {
+  border: none;
+  padding: 10px;
+  padding-left: 0;
+  outline: none;
+  border-bottom: 2px solid #00B3FF;
+  margin-bottom: 10px;
+  width: 95%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #808080;
+}
+
+.buttons button.disabled {
+  padding: 5px 10px;
+  background: lightgray;
+  color: #808080;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+}
+
+.buttons button.abled {
+  background: #00B3FF;
+  color: #fff;
+  border-radius: 10px;
+  width: 10%;
+}
+
+.policy {
+  margin: 20px 0;
+  font-size: 0.8 rem;
+  font-family: Arial, sans-serif;
+  color: #808080;
+}
+
+.policy a {
+  text-decoration: none;
+  color: blue;
+}
+
+.notify {
+  margin-right: 10px;
+  display: flex;
   align-items: center;
 }
 
-.customer-image{
-  margin-top: 20px;
-  margin-left: 22rem;
-  height: 60px;
-  width: 60px;
-  background-size: cover;
-  border-radius: 50%;
-}
-.customer-1{
-  background-image: url('https://i.pinimg.com/originals/cc/56/e9/cc56e94b4c5a40605f3f016cf448cce5.jpg ')
-}
-.customer-2{
-  background-image: url('https://i.pinimg.com/originals/11/91/be/1191be158f7a6c36540f2f576abd3596.jpg')
-}
-
-.customer h1 {
-  font-weight: bold;
-  margin-top: 10px;
-  margin-left: 21rem;
-}
-.customer h2 {
-  margin-top: 18px;
-  justify-content: center;
-  font-weight: lighter;
-  padding: 10px;
-}
-.customer a{
-  color: rgb(6, 135, 255);
-  padding: 10px;
-}
-.highlightblue{
-  color:#00B3FF
-}
-.price {
-  font-size: 24px;
-  font-weight: 700;
-  font-style: normal;
-}
-.bold{
-  font-weight: bold;
-}
-
-
-.tour img{
-  height: 10px;
-  width: 10px;
+.notify >input {
   margin-right: 5px;
 }
 
-.tour-details {
+.parents {
+  font-family: Arial, Sans-serif;
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 30px;
 }
-.happy{
-  margin-top: 27px;
-  margin-bottom: 0.5px;
-}
-.happy img {
-  height: 30px;
-  width: 30px;
-  margin-left: 5px; /* Adjust the margin as needed */
-  float: right; /* Float the images to the right */
+.parents h1 {
+  font-size: 0.9em;
 }
 
-.blue-background {
-  border-radius: 100%; 
-  background-color: #00B3FF;
-}
-.gray-background{
-  border-radius: 100%; 
-  background-color: #c9caca;
+.parents p {
+  margin: 10px 0;
+  font-size: 0.9em;
 }
 
+.parents > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 2rem;
+}
+
+.attach img {
+  width: 200px;
+  height: 200px;
+  display: wrap;
+  justify-content: space-around;
+  margin-left: 5px;
+}
+
+.engagements {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.engagements img{
+  width: 10px;
+}
+
+.engagements img:nth-child(1) {
+  margin-right: 10px;
+  width: 10px;
+}
+
+.date {
+  color: #808080;
+  font-size: 0.8em;
+}
+/* Effects*/
 
 .fade-in {
   opacity: 0;

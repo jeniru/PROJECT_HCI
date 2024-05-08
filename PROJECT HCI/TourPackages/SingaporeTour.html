@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Website</title>
-    <link rel="stylesheet" href="SingaporeTour.css">
+    <link rel="stylesheet" href="JapanTour.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
 </head>
 <body>
     <header>
-        <h1><a href="#" class="logo"><img src="images/logo.png" alt="Wander Bros. Logo">Wander</a></h1>
+        <h1><a href="#" class="logo"><img src="../images/wanderlogo.png" alt="Wander Bros. Logo">Wander</a></h1>
         <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="ABOUTUS.HTML">About Us</a>
+            <a href="../home.html">Home</a>
+            <a href="../ABOUTUS.HTML">About Us</a>
             <a href="hciPROJECT.html">Tour Packages</a>
-            <a href="contactus.html">Contact Us</a>
-            <button class="btnLogin-popup">Login</button>
+            <a href="../contactus.html">Contact Us</a>
         </nav>
+        <button class="btnLogin-popup"><a href="signup.html">Login</a></button>
     </header>
     <main>  
         <section class="home">
@@ -44,11 +45,9 @@
                 <p>Tokyo, Japan and 4 other destinations in Japan. Japan One Life Adventures - 10</p>
                 <p>Days includes accommodation, an expert guide, meals, transport and more.</p>
                 <div id='calendar'></div>
-                <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
                 <script src="JapanTour.js"></script>
                 <div class="time-title"><h3>Time</h3></div>
                 <input type="time" id="timeInput" name="timeInput" placeholder="Select a time">
-             
                 <button class="booknow-button"><a href="Japanbook.html">Book Now</a></button>
             </div>
             </div>
@@ -56,72 +55,160 @@
         
         <!-- Details -->
         <div class="title fade-in">
-            <h1>Details</h1>
-        </div>
-        <section class="container2 fade-in">
-            <div class="details">
-            <div class="detailsparagraph">
-            <p>Konnichiwa everyone! Japan offers a mind-blowing mix of ancient tradition, neon-lit </p>
-            <p>metropolises, breathtaking natural beauty, and a unique culture that will leave you</p>
-            <p>enchanted. To make the most of our journey, Our action-packed Japan tour blends</p>
-            <p>the neon lights of Tokyo with serene temples in Kyoto, offering a delicious mix of</p>
-            <p>cultural experiences and breathtaking natural beauty. This is just a taste of what</p>
-            <p>awaits us in Japan. Get ready for an unforgettable adventure filled with cultural</p>
-            <P>encounters, historical wonders, and delicious food!</P>
-            </div>
-            <div class="iconss">
-            <p><img src="https://i.ibb.co/zRkD85B/002-group.png"> <span class="bold">Number of group: </span> 10-15</p>
-            <p><img src="https://i.ibb.co/sPvYdGj/003-hour-glass.png"> <span class="bold">Duration: </span> 5 hours and 45 minutes</p>
-            <p><img src="https://i.ibb.co/WfY6ztn/001-location.png"> <span class="bold">Departuring and arriving areas: </span> Haneda Airport</p>
-            <p><img src="https://i.ibb.co/qB8McDH/002-tour-guide.png"> <span class="bold">Guide service: </span> Included</p>
-            <p><img src="https://i.ibb.co/XCTGVmd/003-language.png"> <span class="bold">Language: </span> English, Japanese</p>
-            <p><img src="https://i.ibb.co/Vq72sHH/001-ticket.png"> <span class="bold">Entry Fees: </span> 60.00$(tax-free)</p>
-            <p><img src="https://i.ibb.co/7XPzzGD/002-bus.png"> <span class="bold">EntryTransportation: </span> Bus</p>
-             </div>
-            </div>
-            
-        </section>
-
-        <div class="title fade-in">
-            <h1>Customer Photos</h1>
+            <h1>Customers Feed Back</h1>
         </div>
 
-        <section class="containertwo fade-in">
-            <div class="tourimages">
-                <div class="tour-image tourone"></div>      
-                <div class="tour-image tourtwo"></div>
-                <div class="tour-image tourthree"></div>
+        <section class="customer">
+            <div class="containertwo fade-in">
+                <div class="head">
+                    <h1> CUSTOMERS REVIEW</h1>
+                </div>
+                <div><span id="comment"></span> Review</div>
+                <div class="text">
+                    <p>We are happy to hear from you!</p>
+                </div>
+                <div class="comments"></div>
+                <div class="commentbox">
+                    <img src="../images/wanderlogo.png" alt="">
+                    <div class="content">
+                        <h2>Review as: </h2>
+                        <input type="text" value="Anonymous" class="user">
+                        <div class="commentinput">
+                            <input type="text" placeholder="Enter review" class="usercomment">
+                            <input type="file" id="photoInput" accept="image/*" multiple class="imageUpload">
+                            <div class="rating">
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star5"><img src="../images/star.png" style="width:20px;height:20px;"></label><br>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star4">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                </label><br>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                </label><br>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star2">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                </label><br>
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star1">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                    <img src="../images/star.png" style="width:20px;height:20px;">
+                                </label><br>
+                            </div>
+                            <div class="buttons">
+                                <button type="submit" disabled id="publish">Publish</button>
+                                <div class="notify">
+                                    <input type="checkbox" class="notifyinput"> <span>Notify me</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="policy">This site is protected by reCAPTCHA and the Google <a href=""> privacy policy </a>and <a href=""> Terms of Service </a>apply.</p>
+                        <div class="rating-result" style="display: none;">
+                            <strong>Your Rating: </strong> <span id="ratingValue"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="tour-image tourfour"></div>
         </section>
-        <!-- HAPPY CUSTOMER -->
-       <div class="happy fade-in">
-        <h1>Happy Customer Says
-            <img class="blue-background" src="https://i.ibb.co/zhPCxSN/right-arrow-angle.png">
-            <img class="gray-background" src="https://i.ibb.co/nfgqnsq/left-arrow.png">
-        </h1>
-        </div>
-
-       
-    
-        <section class="container3 fade-in">
-            <div class="customer">
-                <div class="customer-image customer-1"></div>
-                <h1>Gu Wa Po</h1>
-                <h2>Lorem Ipsum ha sido el texto de relleno estándar de la industria desde el siglo XVI, cuando un impresor desconocido tomó una galería de tipos y los mezcló para hacer un libro de muestras tipográficas. Ha sobrevivido no sólo a cinco siglos, sino también al salto hacia la composición tipográfica electrónica, permaneciendo esencialmente sin cambios.</h2>
-            </div>
-            <div class="customer">
-                <div class="customer-image customer-2"></div>
-                <h1>Ma Gun Duh</h1>
-                <h2>は、無名の印刷業者が活字のゲラをスクランブルして活字見本帳を作成した 1500 年代以来、業界の標準的なダミーテキストです。それは 5 世紀だけでなく、電子写植への飛躍の時代にも、本質的には変わっていないまま生き残ってきました。</h2>
-            </div>
-        </section>
+        
+        <script>
+            "use strict";
+        
+            const userId = {
+                name: null,
+                identity: null,
+                image: null,
+                message: null,
+                date: null,
+                rating: null,
+                photos: null,
+            }
+        
+            const userComment = document.querySelector(".usercomment");
+            const publishBtn = document.querySelector("#publish");
+            const comment = document.querySelector(".comments");
+            const userName = document.querySelector(".user");
+            const photoInput = document.getElementById("photoInput");
+        
+            userComment.addEventListener("input", e => {
+                if (!userComment.value) {
+                    publishBtn.setAttribute("disabled", "disabled");
+                    publishBtn.classList.remove("abled")
+                } else {
+                    publishBtn.removeAttribute("disabled");
+                    publishBtn.classList.add("abled")
+                }
+            })
+        
+            function addPost() {
+                console.log("The button works! ")
+                if (!userComment.value) return;
+                userId.name = userName.value;
+                if (userId.name === "Anonymous") {
+                    userId.identiy = false;
+                    userId.image = "../images/wanderlogo.png";
+                } else {
+                    userId.identity = true;
+                    userId.image = "../images/user.png"
+                }
+        
+                userId.message = userComment.value;
+                userId.date = new Date().toLocaleString();
+                userId.rating = document.querySelector('input[name="rating"]:checked').value || null;
+        
+                // Get attached photos
+                const photos = [];
+                for (const photo of photoInput.files) {
+                    photos.push(`<img src="${URL.createObjectURL(photo)}" alt="Attached Photo">`);
+                }
+        
+                let publish = `<div class="parents">
+                    <img src="${userId.image}">
+                    <div>
+                        <h1>${userId.name}</h1>
+                        <div class="rating-result" style="display: ${userId.rating ? 'block' : 'none'}">
+                            <strong>Your Rating: </strong> <span>${userId.rating}</span>
+                        </div><br>
+                        <p>${userId.message}</p>
+                        <div class="attach">
+                        ${photos.join("")} <!-- Display attached photos -->   
+                        </div>  
+                        <div class="engagements"><img src="../images/like.png"><img src="../images/share.png"></div>
+                        <span class="date">${userId.date}</span>
+                    </div>
+                </div>`;
+        
+                comment.innerHTML += publish;
+                userComment.value = "";
+        
+                let commentsNum = document.querySelectorAll(".parents").length;
+                document.getElementById("comment").textContent = commentsNum;
+        
+                // Clear the attached photos
+                photoInput.value = null;
+            }
+        
+            publishBtn.addEventListener("click", addPost);
+        
+        </script>
+        
     
     </main>
     <footer class="footer fade-in">
         <div class="footer_container">
             <div class="footer_logo">
-                <a href="#" class="foot_logo"><img src="logo.png"></a>
+                <a href="#" class="foot_logo"><img src="../images/wanderlogo.png"></a>
                 <br>
                 <hr>
             </div>
@@ -130,10 +217,10 @@
                     <br>
                     <h4>Wander</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="ABOUTUS.HTML">About Us</a></li>
+                        <li><a href="../home.html">Home</a></li>
+                        <li><a href="../ABOUTUS.HTML">About Us</a></li>
                         <li><a href="hciPROJECT.html">Tour Packages</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="../contactus.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -184,6 +271,34 @@
 
     <!-- ******* Footer End ******* -->
     <script>
+
+        const body = document.body;
+        let lastScroll = 0;
+
+        window.addEventListener ('scroll', () => {
+            const currentScroll = window.pageYOffset 
+
+            if (currentScroll <= 0) {
+            body.classList.remove("scroll-up")
+            }
+
+            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+            body.classList.remove("scroll-up")
+            body.classList.add("scroll-down")
+            }
+
+            if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+            body.classList.remove("scroll-down")
+            body.classList.add("scroll-up")
+            }
+
+            lastScroll = currentScroll;
+
+        })
+
+    </script>
+
+    <script>
         document.addEventListener("DOMContentLoaded", function(event) {
             const sections = document.querySelectorAll('.fade-in');
             sections.forEach(section => {
@@ -195,7 +310,22 @@
             });
         });
     </script>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                selectable: true,
+                select: function(start, end) {
+                    console.log('You selected from ' + start.format() + ' to ' + end.format());
+                    document.getElementById('timeInput').value = start.format();
+                }
+            });
+
+            calendar.render();
+        });
+    </script>
 
 </body>
 </html>
