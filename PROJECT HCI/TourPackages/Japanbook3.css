@@ -64,7 +64,7 @@ header {
 
 .logo {
   font-size: 2rem;
-  color: var(--white);
+  color: black;
   user-select: none;
 }
 
