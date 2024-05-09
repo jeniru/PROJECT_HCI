@@ -59,7 +59,10 @@ header {
 .scroll-up header {
   filter: drop-shadow(0 -10px 20px #fff);
 }
-
+/*span*/
+.highlightblue{
+  color: #00bfff;
+}
 /* End scroll stuff */
 
 .logo {
@@ -269,12 +272,14 @@ header {
     margin-bottom: 18px;
     margin-top: 12px;
     font-weight:900;
+    
   }
   .tour1 p{
     font-size: 13px;
     line-height: 1;
     margin-bottom: 11px;
     color: #bab8be;
+    line-height: 200%;
   }
   .title h1{
     padding: 50px 50px 0px 159px ;
