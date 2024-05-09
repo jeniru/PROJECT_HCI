@@ -242,17 +242,18 @@ header {
     
   }
   .tour-1{
-    background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/02/The-Golden-Pavilion.-Kinkakuji-Temple-in-Kyoto-Japan.jpg')
+    background-image: url('https://www.agoda.com/wp-content/uploads/2019/06/Singapore-tourist-spots-Gardens-by-the-Bay.jpg')
   }
   .tour-2{
-    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4472_b479ff.jpg')
+    background-image: url('https://www.paddleyourownkanoo.com/wp-content/uploads/2020/11/joshua-ang-Gf_KqXHU-PY-unsplash-1024x683.jpg')
   }
   .tour-3{
-    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4463_6e87f5.jpg')
+    background-image: url('https://www.agoda.com/wp-content/uploads/2019/06/Singapore-tourist-spots-Singapore-Flyer.jpg')
   }
   .tour-4{
-    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4469_6dee66.jpg')
+    background-image: url('https://www.agoda.com/wp-content/uploads/2019/06/Singapore-tourist-spots-Clarke-Quay-Singapore-River.jpg')
   }
+
 
 
   /* container Japan Tour1 */
@@ -278,6 +279,7 @@ header {
     line-height: 1;
     margin-bottom: 11px;
     color: #bab8be;
+    line-height: 200%;
   }
   .title h1{
     padding: 50px 50px 0px 159px ;

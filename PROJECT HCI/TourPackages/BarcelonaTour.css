@@ -241,18 +241,20 @@ header {
     width: 600px;
     
   }
-  .tour-1{
-    background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/02/The-Golden-Pavilion.-Kinkakuji-Temple-in-Kyoto-Japan.jpg')
-  }
-  .tour-2{
-    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4472_b479ff.jpg')
-  }
-  .tour-3{
-    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4463_6e87f5.jpg')
-  }
-  .tour-4{
-    background-image: url('https://cdn.tourradar.com/s3/cities/520x406/4469_6dee66.jpg')
-  }
+  
+.tour-1{
+  background-image: url('https://www.througheternity.com/upload/CONF83/20230725/gothic_quarter_barcelona_tour_31-tSa-730X490.jpg')
+}
+.tour-2{
+  background-image: url('https://ik.imagekit.io/tvlk/xpe-asset/AyJ40ZAo1DOyPyKLZ9c3RGQHTP2oT4ZXW+QmPVVkFQiXFSv42UaHGzSmaSzQ8DO5QIbWPZuF+VkYVRk6gh-Vg4ECbfuQRQ4pHjWJ5Rmbtkk=/4619427647252/Sagrada-Familia-Fast-Track-ee698f75-0599-402e-ba00-32fe0ee5905d.png?_src=imagekit&tr=c-at_max,h-400,q-100,w-1280')
+}
+.tour-3{
+  background-image: url('https://cxgveiouca.cloudimg.io/familyhotelfinder.com/wp-content/uploads/Andalusia-White-Villages2-SH.jpg?w=960&h=540&func=cover')
+}
+.tour-4{
+  background-image: url('https://international-horizons.com/wp-content/webp-express/webp-images/uploads/2023/10/henrique-ferreira-62QRdDoe44M-unsplash-min-980x653.jpg.webp')
+}
+
 
 
   /* container Japan Tour1 */
