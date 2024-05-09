@@ -64,7 +64,7 @@ header {
 
 .logo {
   font-size: 2rem;
-  color: var(--white);
+  color: var(--black);
   user-select: none;
 }
 
@@ -370,13 +370,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #808080;
+  color: #3f3f3f;
 }
 
 .buttons button.disabled {
   padding: 5px 10px;
-  background: lightgray;
-  color: #808080;
+  background: white;
+  color: #3f3f3f;
   text-transform: uppercase;
   border: none;
   outline: none;
@@ -396,9 +396,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #dddddd;
+  color: #ffffff;
   background-color: white;
   margin-right: 6rem;
+  cursor: pointer;
 }
 
 .policy {
@@ -468,6 +469,13 @@ header {
   color: #808080;
   font-size: 0.8em;
 }
+
+.deleteBtn {
+  color: #808080;
+  font-size: 0.8em;
+  background-color: white;
+}
+
 /* Effects*/
 
 .fade-in {
