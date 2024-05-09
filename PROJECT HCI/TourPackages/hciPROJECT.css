@@ -135,7 +135,7 @@ header {
 
 }
 .titl3 h1{
-  margin-top: 90px;
+  margin-top: 170px;
   text-align: center;
   margin-bottom: 27px;
   font-weight: 900;
@@ -288,7 +288,14 @@ header {
 /* BOOK now SECTION */
 
 .booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
   display: flex;
+  flex-direction: column;
 }
 
 .container-3 {
@@ -325,6 +332,8 @@ header {
   border: none;
   background-color: #00B3FF;
 }
+
+
 
 /*Customer Section*/
 
