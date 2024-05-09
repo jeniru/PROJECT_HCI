@@ -135,7 +135,6 @@ header {
 .container_tag .box {
     margin: auto;
     background-color: #555454c5;
-
     font-size: 50px;
     font-weight: 50;
     color: var(--text-light);
@@ -144,9 +143,7 @@ header {
     padding-bottom: 50px;
     padding-left: 100px;
     padding-right: 100px;
-
 }
-
 
 
 .container_tag .box p{
@@ -158,89 +155,103 @@ header {
     text-align: center;
 }
 
-.container_oursite{
-    border-radius: 18px;
-    padding-top: 100px;
-    text-align: center;
-    
 
-}
-.container_site p {
-    font-size: 30px;
-    margin-left: 6%;
-    margin-right: 6%;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
+/*CENTER*/
 
-}
-.container_site h1 {
-    font-size: 75px;
-    font-weight: 600;
-}
-.container_site h2 {
-    font-size: 40px;
-    font-weight: 300;
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-bottom: 20px;
-}
-.container_success {
-    background-image: url(success.png);
-    background-repeat: no-repeat;
+.center{
+    height: 800px;
     max-width: 100%;
-    background-size: cover;
-    padding-top: 300px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: #ffffff;
+}
+.center-content {
+    background-color: #ffffff;
+    height: 600px;
+    width: 1400px;
+    display: flex;
+    flex-direction: column; /* Adjusted to column for stacking */
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+    border: #e7e7e7 solid;
 }
 
-.container3 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .customer {
-    border: 1px solid #ecf1f1;
+.contend-d{
     height: 300px;
-    width: 500px;
-    margin: 10px;
-    border-radius: 20px;  
-  }
- 
-  .customer-image{
-    margin-top: 3rem;
-    margin-left: 23rem;
-    height: 60px;
-    width: 60px;
-    background-size: cover;
-    border-radius: 50%;
-  }
- 
-  .customer-1{
-    background-image: url('lawrence.jpg')
-  }
-  .customer-2{
-    background-image: url('lawrence.jpg')
-  }
- 
-  .customer h1 {
-    margin-left: 21rem;
-  }
-  .customer h2 {
-    padding: 10px;
-    margin: 30px;
-  }
-  .customer p {
-    padding: 10px;
-  }
-  .customer a{
-    color: rgb(6, 135, 255);
-    padding: 10px;
-  }
+    width: 700px;
+    display: flex;
+    flex-direction: column; /* Adjusted to column for stacking */
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+.contend-d h1{
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+.contend-d p{
+    text-align: left;
+    line-height: 2;
+}
 
-.footers{
-    padding-top: 15%;
+.center-content h1{
+    margin: 0;
+}
+
+.years {
+    height: 90px;
+    width: 700px;
+    display: flex;
+}
+
+.service{
+    height: 90px;
+    width: 100px;
+    display: wrap;
+    margin: 0 40px;
+    text-align: left;
+}
+.service h1{
+    color: #00bfff;
+}
+
+
+/*SUCCESSS*/
+
+.container_success {
+    background-color: #55ccff;
+    max-width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+} 
+
+
+.con-success {
+    background-color: #ffffff;
+    height: 180px;
+    width: 300px;
+    margin: 0 40px; /* Add space between each box */
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column; /* Adjusted to column for stacking */
+    justify-content: center; 
+    align-items: center;
+    text-align: center; /* Center align text */
+}
+
+.con-success img {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 10px; /* Add space between image and text */
+}
+
+.con-success p {
+    margin: 0; /* Remove default margin */
 }
 
 .footer_container{
@@ -265,7 +276,6 @@ header {
 ul{
     list-style: none;
 }
-
 
 
 
