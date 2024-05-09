@@ -49,7 +49,10 @@ header {
   align-items: center;
   z-index: 999;
 }
-
+/*span*/
+.highlightblue{
+  color: #00bfff;
+}
 /* Scroll Stuff */
 
 .scroll-down header {
