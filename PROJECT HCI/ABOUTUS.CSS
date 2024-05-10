@@ -159,7 +159,7 @@ header {
 /*CENTER*/
 
 .center{
-    height: 800px;
+    height: 750px;
     max-width: 100%;
     display: flex;
     justify-content: center; 
@@ -175,8 +175,7 @@ header {
     justify-content: center; 
     align-items: center;
     text-align: center;
-    border-radius: 50px;
-    border: #e7e7e7 solid;
+
 }
 
 .contend-d{
@@ -256,10 +255,30 @@ header {
 
 /*SUCCESSS*/
 
+.title {
+    background-color: white;
+    text-align: center;
+    color: #00B3FF;
+
+}
+
+.line h1{
+    background-color: white;
+    text-align: center;
+    color: #00B3FF;
+    font-weight:normal;
+}
+
+.role {
+    font-weight: lighter;
+    font-family: "EB Garamond", serif;
+
+}
+
 .creator {
     background-color: #ffffff;
     max-width: 100%;
-    height: 450px;
+    height: 550px;
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -281,15 +300,16 @@ header {
 }
 
 .user img {
-    height: 300px;
+    height: 230px;
     width: 220px;
     margin-bottom: 10px; /* Add space between image and text */
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
-.user p {
+.names {
     margin: 0; /* Remove default margin */
     font-weight: bold;
+    color: #00B3FF;
 }
 
 /* FOOT*/
@@ -304,8 +324,7 @@ header {
 
 .row{
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;  
 }
 
 

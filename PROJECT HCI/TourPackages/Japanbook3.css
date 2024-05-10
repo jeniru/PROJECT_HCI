@@ -211,7 +211,7 @@ header {
 /*Container*/
 
 .container {
-    height: 600px;
+    height: 700px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -336,7 +336,7 @@ input[type="text"] {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
-  height: 500px;
+  height: 600px;
 }
 
 .overview h1{

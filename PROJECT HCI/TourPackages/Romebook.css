@@ -37,6 +37,7 @@ body {
   width: 100%;
   height: 100vh;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -64,7 +65,7 @@ header {
 
 .logo {
   font-size: 2rem;
-  color: var(--white);
+  color: black;
   user-select: none;
 }
 
@@ -129,7 +130,6 @@ header {
   background: #f6ff74;
   color: var(--primary-color);
 }
-
   /* PROGRESS*/
 .booking-container {
     display: flex;
@@ -318,7 +318,7 @@ input[type="time"] {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
-  height: 500px;
+  height: 550px;
 }
 
 .overview h1{

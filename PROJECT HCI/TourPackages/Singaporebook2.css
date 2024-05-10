@@ -37,23 +37,34 @@ body {
   width: 100%;
   height: 100vh;
 }
-
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px 100px;
-  background: #ffffff2c;
+  background: #ffffff51;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 999;
 }
 
+/* Scroll Stuff */
+
+.scroll-down header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+  filter: drop-shadow(0 -10px 20px #fff);
+}
+
+/* End scroll stuff */
+
 .logo {
   font-size: 2rem;
-  color: var(--black);
+  color: black;
   user-select: none;
 }
 
@@ -63,14 +74,13 @@ header {
   text-decoration: none;
 }
 .logo img{
-  width: 50px;
+  width: 60px;
   height: 50px;
 }
-
 .nav a {
   position: relative;
-  font-size: 2rem;
-  color: var(--black);
+  font-size: 20px;
+  color: var(--text-grey);
   text-decoration: none;
   font-weight: 500;
   margin-left: 40px;
@@ -95,7 +105,7 @@ header {
   transform: scalex(1);
 }
 
-.nav .btnLogin-popup {
+.btnLogin-popup {
   width: 130px;
   height: 50px;
   background: var(--primary-btn-color);
@@ -103,17 +113,23 @@ header {
   outline: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 18px;
   color: var(--text-light);
   font-weight: 500;
   margin-left: 40px;
   transition: .553
 }
 
-.nav .btnLogin-popup:hover {
-  background: var(--white);
+.btnLogin-popup a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.btnLogin-popup:hover {
+  background: #f6ff74;
   color: var(--primary-color);
 }
+
   /* PROGRESS*/
 .booking-container {
     display: flex;
@@ -195,7 +211,7 @@ header {
 /*Container*/
 
 .container {
-    height: 600px;
+    height: 700px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -260,7 +276,7 @@ input[type="email"] {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
-  height: 500px;
+  height: 600px;
 }
 
 .overview h1{
@@ -358,6 +374,7 @@ input[type="email"] {
       transform: translateX(0);
   }
 }
+
 /* ------  Footer   ------ */
 
 .footer_container {
