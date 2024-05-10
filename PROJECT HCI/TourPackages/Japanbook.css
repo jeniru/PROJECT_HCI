@@ -70,7 +70,7 @@ header {
 }
 
 .logo {
-  display: flex;
+  display: flex; 
   align-items: center;
   text-decoration: none;
 }
@@ -348,7 +348,7 @@ input[type="time"] {
 }
 
 .ticket-1 {
-  background-image: url('https://www.touropia.com/gfx/b/2019/09/lapland-1.jpg')
+  background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/02/The-Golden-Pavilion.-Kinkakuji-Temple-in-Kyoto-Japan.jpg')
 }
 
 .information {
