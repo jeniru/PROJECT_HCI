@@ -332,6 +332,9 @@ header {
   border: none;
   background-color: #00B3FF;
 }
+.form-group .btn a {
+  color: white; /* Override hyperlink color */
+}
 
 
 
