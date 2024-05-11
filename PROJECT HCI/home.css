@@ -528,7 +528,18 @@ header {
     padding: 10px;
 }
 
-.container-3 {
+.booking-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container-3 {
     height: 500px;
     width: 100%;
     background-size: cover;
@@ -538,20 +549,20 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
-}
-
-/*honda*/
-
-.box-6 {
+  }
+  
+  /*honda*/
+  
+  .box-6 {
     height: 400px;
     width: 570px;
     background-color: #efefef86;
     border-radius: 20px;
     padding: 20px;
-}
-
-
-.form-group .btn {
+  }
+  
+  
+  .form-group .btn {
     display: flex;
     align-self: center;
     padding: 10px 25px;
@@ -561,8 +572,10 @@ header {
     border-radius: 30px;
     border: none;
     background-color: #00B3FF;
-}
-
+  }
+  .form-group .btn a {
+    color: white; /* Override hyperlink color */
+  }
 /*feedbacks*/
 
 .happy h1{
