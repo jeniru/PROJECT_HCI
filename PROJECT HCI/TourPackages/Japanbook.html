@@ -118,65 +118,95 @@
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-        // Get quantity control elements
-        const quantityAdult = document.querySelector('.quantity-adult');
-        const quantityChild = document.querySelector('.quantity-child');
-        const quantityInfant = document.querySelector('.quantity-infant');
-
-        // Get price elements
-        const priceAdult = document.querySelector('.priceadult');
-        const priceChild = document.querySelector('.pricechild');
-        const priceInfant = document.querySelector('.priceinfant');
-        const priceTotal = document.querySelector('.pricetotal');
-
-        // Function to update ticket details and total price
-        function updateTicketDetails() {
-            const adultPrice = 34; // Price for adult ticket
-            const childPrice = 22; // Price for child ticket
-            const infantPrice = 0; // Price for infant ticket
-
-            const totalAdultPrice = adultPrice * parseInt(quantityAdult.value);
-            const totalChildPrice = childPrice * parseInt(quantityChild.value);
-            const totalInfantPrice = infantPrice * parseInt(quantityInfant.value);
-
-            priceAdult.textContent = "€" + totalAdultPrice.toFixed(2);
-            priceChild.textContent = "€" + totalChildPrice.toFixed(2);
-            priceInfant.textContent = "€" + totalInfantPrice.toFixed(2);
-
-            const totalPrice = totalAdultPrice + totalChildPrice + totalInfantPrice;
-            priceTotal.textContent = "€" + totalPrice.toFixed(2);
-
-            // Store values in sessionStorage
-            sessionStorage.setItem('quantityAdult', quantityAdult.value);
-            sessionStorage.setItem('quantityChild', quantityChild.value);
-            sessionStorage.setItem('quantityInfant', quantityInfant.value);
-        }
-
-        // Add event listeners to quantity control buttons
-        document.querySelectorAll('.quantity-control button').forEach(button => {
-            button.addEventListener('click', function() {
-                const inputField = this.parentNode.querySelector('input');
-                const currentValue = parseInt(inputField.value);
-
-                if (this.classList.contains('increase')) {
-                    inputField.value = currentValue + 1;
-                } else if (this.classList.contains('decrease') && currentValue > 0) {
-                    inputField.value = currentValue - 1;
-                }
-
-                updateTicketDetails();
+            // Get quantity control elements
+            const quantityAdult = document.querySelector('.quantity-adult');
+            const quantityChild = document.querySelector('.quantity-child');
+            const quantityInfant = document.querySelector('.quantity-infant');
+    
+            // Get price elements
+            const priceAdult = document.querySelector('.priceadult');
+            const priceChild = document.querySelector('.pricechild');
+            const priceInfant = document.querySelector('.priceinfant');
+            const priceTotal = document.querySelector('.pricetotal');
+    
+            // Get date and time input elements
+            const dateInput = document.getElementById('dateInput');
+            const timeInput = document.getElementById('timeInput');
+    
+            // Function to update ticket details and total price
+            function updateTicketDetails() {
+                const adultPrice = 34; // Price for adult ticket
+                const childPrice = 22; // Price for child ticket
+                const infantPrice = 0; // Price for infant ticket
+    
+                const totalAdultPrice = adultPrice * parseInt(quantityAdult.value);
+                const totalChildPrice = childPrice * parseInt(quantityChild.value);
+                const totalInfantPrice = infantPrice * parseInt(quantityInfant.value);
+    
+                priceAdult.textContent = "€" + totalAdultPrice.toFixed(2);
+                priceChild.textContent = "€" + totalChildPrice.toFixed(2);
+                priceInfant.textContent = "€" + totalInfantPrice.toFixed(2);
+    
+                const totalPrice = totalAdultPrice + totalChildPrice + totalInfantPrice;
+                priceTotal.textContent = "€" + totalPrice.toFixed(2);
+    
+                // Store values in localStorage
+                localStorage.setItem('quantityAdult', quantityAdult.value);
+                localStorage.setItem('quantityChild', quantityChild.value);
+                localStorage.setItem('quantityInfant', quantityInfant.value);
+                localStorage.setItem('dateInput', dateInput.value);
+                localStorage.setItem('timeInput', timeInput.value);
+    
+                // Update ticket overview
+                const ticketOverviewDate = new Date(dateInput.value).toDateString();
+                const ticketOverviewTime = timeInput.value;
+                const ticketOverviewElement = document.querySelector('.ticketoverview');
+                ticketOverviewElement.innerHTML = `
+                    <div class="ticket-image ticket-1"></div>
+                    <div class="information">
+                        <h2>Tour In Japan</h2>
+                        <p>${ticketOverviewDate}</p>
+                        <p>${ticketOverviewTime} ETA</p>
+                    </div>`;
+    
+                // Save ticket overview date and time in localStorage
+                localStorage.setItem('ticketOverviewDate', ticketOverviewDate);
+                localStorage.setItem('ticketOverviewTime', ticketOverviewTime);
+            }
+    
+            // Add event listeners to quantity control buttons
+            document.querySelectorAll('.quantity-control button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const inputField = this.parentNode.querySelector('input');
+                    const currentValue = parseInt(inputField.value);
+    
+                    if (this.classList.contains('increase')) {
+                        inputField.value = currentValue + 1;
+                    } else if (this.classList.contains('decrease') && currentValue > 0) {
+                        inputField.value = currentValue - 1;
+                    }
+    
+                    updateTicketDetails();
+                });
             });
+    
+            // Add event listeners to date and time inputs
+            dateInput.addEventListener('change', updateTicketDetails);
+            timeInput.addEventListener('change', updateTicketDetails);
+    
+            // Retrieve stored values from localStorage
+            quantityAdult.value = localStorage.getItem('quantityAdult') || 0;
+            quantityChild.value = localStorage.getItem('quantityChild') || 0;
+            quantityInfant.value = localStorage.getItem('quantityInfant') || 0;
+            dateInput.value = localStorage.getItem('dateInput') || '';
+            timeInput.value = localStorage.getItem('timeInput') || '';
+    
+            // Initial update of ticket details
+            updateTicketDetails();
         });
-
-        // Retrieve stored values from sessionStorage
-        quantityAdult.value = sessionStorage.getItem('quantityAdult') || 0;
-        quantityChild.value = sessionStorage.getItem('quantityChild') || 0;
-        quantityInfant.value = sessionStorage.getItem('quantityInfant') || 0;
-
-        // Initial update of ticket details
-        updateTicketDetails();
-    });
     </script>
+    
+    
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="Japanbook.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

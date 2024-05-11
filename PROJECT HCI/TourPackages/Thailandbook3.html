@@ -104,49 +104,63 @@
                 const priceChild = document.querySelector('.pricechild');
                 const priceInfant = document.querySelector('.priceinfant');
                 const priceTotal = document.querySelector('.pricetotal');
-
-                if (quantityAdult && quantityChild && quantityInfant && priceAdult && priceChild && priceInfant && priceTotal) {
-                    quantityAdult.value = sessionStorage.getItem('quantityAdult') || 0;
-                    quantityChild.value = sessionStorage.getItem('quantityChild') || 0;
-                    quantityInfant.value = sessionStorage.getItem('quantityInfant') || 0;
-
+                const ticketOverviewElement = document.querySelector('.ticketoverview');
+        
+                if (quantityAdult && quantityChild && quantityInfant && priceAdult && priceChild && priceInfant && priceTotal && ticketOverviewElement) {
+                    // Retrieve stored values from localStorage
+                    quantityAdult.value = localStorage.getItem('quantityAdult') || 0;
+                    quantityChild.value = localStorage.getItem('quantityChild') || 0;
+                    quantityInfant.value = localStorage.getItem('quantityInfant') || 0;
+        
                     function updateTicketDetails() {
                         const adultPrice = 34;
                         const childPrice = 22;
                         const infantPrice = 0;
-
+        
                         const totalAdultPrice = adultPrice * parseInt(quantityAdult.value);
                         const totalChildPrice = childPrice * parseInt(quantityChild.value);
                         const totalInfantPrice = infantPrice * parseInt(quantityInfant.value);
-
+        
                         priceAdult.textContent = "€" + totalAdultPrice.toFixed(2);
                         priceChild.textContent = "€" + totalChildPrice.toFixed(2);
                         priceInfant.textContent = "€" + totalInfantPrice.toFixed(2);
-
+        
                         const totalPrice = totalAdultPrice + totalChildPrice + totalInfantPrice;
                         priceTotal.textContent = "€" + totalPrice.toFixed(2);
-
-                        sessionStorage.setItem('quantityAdult', quantityAdult.value);
-                        sessionStorage.setItem('quantityChild', quantityChild.value);
-                        sessionStorage.setItem('quantityInfant', quantityInfant.value);
                     }
-
+        
+                    // Add event listeners to quantity control buttons
                     document.querySelectorAll('.quantity-control button').forEach(button => {
                         button.addEventListener('click', function() {
                             const inputField = this.parentNode.querySelector('input');
                             const currentValue = parseInt(inputField.value);
-
+        
                             if (this.classList.contains('increase')) {
                                 inputField.value = currentValue + 1;
                             } else if (this.classList.contains('decrease') && currentValue > 0) {
                                 inputField.value = currentValue - 1;
                             }
-
+        
                             updateTicketDetails();
                         });
                     });
-
+        
+                    // Initial update of ticket details
                     updateTicketDetails();
+        
+                    // Update ticket overview content based on retrieved data
+                    const ticketOverviewDate = localStorage.getItem('ticketOverviewDate');
+                    const ticketOverviewTime = localStorage.getItem('ticketOverviewTime');
+        
+                    if (ticketOverviewDate && ticketOverviewTime) {
+                        ticketOverviewElement.innerHTML = `
+                            <div class="ticket-image ticket-1"></div>
+                            <div class="information">
+                                <h2>Tour In Japan</h2>
+                                <p>${ticketOverviewDate}</p>
+                                <p>${ticketOverviewTime} ETA</p>
+                            </div>`;
+                    }
                 }
             });
         </script>
