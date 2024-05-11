@@ -32,11 +32,86 @@
                         <i class="search-icon fas fa-search"></i>
                         <input type="text" id="search" placeholder="....">
                         <button id="search-button">Search</button> 
-                      </div>
-                </div>
+                    </div>
+                    <div id="search-dropdown" class="dropdown"></div>
+                </div>               
             </div>
           </div>   
         </section>
+        <script>
+            // Sample data for autocomplete dropdown
+            const suggestions = ['Tour Package', 'Home', 'Contact Us', 'About Us', 'Book'];
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                const searchInput = document.getElementById('search');
+                const searchButton = document.getElementById('search-button');
+        
+                searchInput.addEventListener('input', function() {
+                    const searchText = this.value.toLowerCase();
+                    const dropdown = document.getElementById('search-dropdown');
+                    dropdown.innerHTML = '';
+        
+                    const filteredSuggestions = suggestions.filter(item => item.toLowerCase().includes(searchText));
+                    filteredSuggestions.forEach(item => {
+                        const option = document.createElement('div');
+                        option.classList.add('dropdown-option');
+                        option.textContent = item;
+                        option.addEventListener('click', function() {
+                            // Redirect to appropriate pages based on selection
+                            switch (item) {
+                                case 'Tour Package':
+                                    window.location.href = 'TourPackages/hciPROJECT.html';
+                                    break;
+                                case 'Home':
+                                    window.location.href = 'home.html';
+                                    break;
+                                case 'Contact Us':
+                                    window.location.href = 'contactus.html';
+                                    break;
+                                case 'About Us':
+                                    window.location.href = 'aboutus.html';
+                                    break;
+                                case 'Book':
+                                    window.open('https://www.jaguar.ph/jaguar-range/overview?utm_source=gs&utm_medium=sem&utm_campaign=ph_nv_jg_jg_all_ajg_my23_en_gmc1000_do_cpdxue_gs_sg_2309_rsa_mul_geo_nu_xpl_ao_sem_03725095_dc_nu_hs-ao-%2Fgeneric-car-type&utm_content=03725095_jaguar_suv_always-on-jaguar_broad-match_generic-car-type_vehicles&utm_term=buy+vehicle&ds_rl%5B0%5D=1301089&ds_rl%5B1%5D=1301089&gad_source=1&gclid=EAIaIQobChMIgK38meqChgMVTRWDAx1KXwNMEAAYASAAEgIMsfD_BwE&gclsrc=aw.ds', '_blank');
+                                    break;
+                                default:
+                                    break;
+                            }
+                        });
+                        dropdown.appendChild(option);
+                    });
+        
+                    // Show dropdown if there are suggestions, hide otherwise
+                    dropdown.style.display = filteredSuggestions.length ? 'block' : 'none';
+                });
+        
+                searchButton.addEventListener('click', function() {
+                    const searchText = searchInput.value.trim();
+                    if (searchText) {
+                        // Redirect to appropriate page based on search query
+                        switch (searchText.toLowerCase()) {
+                            case 'tour package':
+                                window.location.href = 'tour_package.html';
+                                break;
+                            case 'home':
+                                window.location.href = 'home.html';
+                                break;
+                            case 'contact us':
+                                window.location.href = 'contactus.html';
+                                break;
+                            case 'about us':
+                                window.location.href = 'aboutus.html';
+                                break;
+                            case 'book':
+                                window.open('https://www.jaguar.ph/jaguar-range/overview?utm_source=gs&utm_medium=sem&utm_campaign=ph_nv_jg_jg_all_ajg_my23_en_gmc1000_do_cpdxue_gs_sg_2309_rsa_mul_geo_nu_xpl_ao_sem_03725095_dc_nu_hs-ao-%2Fgeneric-car-type&utm_content=03725095_jaguar_suv_always-on-jaguar_broad-match_generic-car-type_vehicles&utm_term=buy+vehicle&ds_rl%5B0%5D=1301089&ds_rl%5B1%5D=1301089&gad_source=1&gclid=EAIaIQobChMIgK38meqChgMVTRWDAx1KXwNMEAAYASAAEgIMsfD_BwE&gclsrc=aw.ds', '_blank');
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                });
+            });
+        </script>
     </div>
 
     <main>

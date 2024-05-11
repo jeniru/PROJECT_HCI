@@ -167,6 +167,7 @@ header {
 }
 
 .grey_container {
+    position: relative; /* Set position relative for parent */
     display: flex;
     background-color: #efefef86;
     background-size: 80px;
@@ -177,7 +178,7 @@ header {
     width: 95%;
 }
 
-#search-wrapper{
+#search-wrapper {
     display: flex;
     border: 1px solid rgba(0, 0, 0, 0.276);
     align-items: stretch;
@@ -186,30 +187,55 @@ header {
     overflow: hidden;
     max-width: 600px;
     box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.273);
+    position: relative; /* Set position relative for search wrapper */
 }
 
-#search{
+#search {
     border: none;
     width: 450px;
     font-size: 18px;
 }
 
-#search:focus{
+#search:focus {
     outline: none;
 }
 
-.search-icon{
+.search-icon {
     margin: 10px;
-    color:rgba(0, 0, 0, 0.564);
+    color: rgba(0, 0, 0, 0.564);
 }
 
-#search-button{
+#search-button {
     border: none;
     cursor: pointer;
     color: var(--text-light);
     background-color: var(--primary-btn-color);
-    padding:0px 10px;
+    padding: 0px 10px;
 }
+
+#search-dropdown {
+    position: absolute;
+    top: calc(100% + 5px); /* Position below the search wrapper */
+    left: 0;
+    width: 100%;
+    background-color: #efefef86;
+    border: 1px solid rgba(0, 0, 0, 0.276);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure dropdown is above other content */
+    display: none; /* Initially hide the dropdown */
+}
+
+.dropdown-option {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
 
 .titl3 h1{
     margin-top: 90px;
