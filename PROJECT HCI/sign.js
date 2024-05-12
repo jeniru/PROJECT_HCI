@@ -1,17 +1,11 @@
-const wrapper = document.querySelector('.wrapper');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const btnPopup = document.querySelector('.btnLogin-popup'); // Corrected selector
-const iconClose = document.querySelector('.icon-close'); // Corrected selector
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
 
-registerLink.addEventListener('click', () => {
-    wrapper.classList.add('active-popup');
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
 });
 
-loginLink.addEventListener('click', () => {
-    wrapper.classList.remove('active');
-});
-
-iconClose.addEventListener('click', () => {
-    window.location.href = 'index.html'; // Redirect to the home page
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
 });

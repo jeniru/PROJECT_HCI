@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior:smooth ;
-    font-family: 'Poppins', sans-serif;
-}
-
 :root {
     --primary-color-dark: #052659;
     --primary-color-light: #2691fc;
@@ -18,193 +10,214 @@
     --white: #ffffff;
     --black: #000000;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", 'sans-serif';
+}
 
 body {
+    background-image: url(images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: url(images/header.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100vw; /* Change to viewport width */
-    height: 100vh; /* Change to viewport height */
-    margin: 0; /* Remove default margin */
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(images/header.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: 1; /* Ensure the background is behind the wrapper */
-}
-
-.wrapper {
+.container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
-    width: 400px;
-    height: 440px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
-    transition: transform .5s ease, height .2s ease;
-    z-index: 2; /* Ensure the wrapper is above the background */
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
 }
 
-.wrapper.active-popup {
-    transform: scale(1);
+.container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px;
 }
 
-.wrapper .form-box.register.active {
-    height: 520px; /* Adjust the height as needed */
+.container span {
+    font-size: 12px;
 }
 
-.wrapper .form-box {
+.container a {
+    color: red;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button {
+    background-color: var(--primary-btn-color);
+    color: var(--text-light);
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button .hidden {
+    background-color: transparent;
+    border-color: #01a2ff;
+}
+
+.container form {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input {
+    background-color: #333333;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
     width: 100%;
-    padding: 40px;
+    outline: none;
 }
 
-.wrapper .form-box.login {
-    transition: transform .18s ease;
-    transform: translateX(0);
-}
-
-.wrapper .form-box.register {
-    position: absolute;
-    transition: none;
-    transform: translateX(400px);
-}
-
-.wrapper.active .form-box.register {
-    transition: transform .18s ease;
-}
-
-.wrapper .icon-close {
+.form-container {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background: var(--primary-btn-color);
-    font-size: 2rem;
-    color: #fff;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
+    height: 100%;
+    transition: 0.6s ease-in-out;
+}
+
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.active .sign-in {
+    transform: translateX(100%);
+}
+
+.sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
     z-index: 1;
 }
 
-.form-box h2 {
-    font-size: 2rem;
-    color: var(--text-light);
-    text-align: center;
+.container.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
 }
-.input-box {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid #162938;
-    margin: 30px 0;
+
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
 }
-.input-box label {
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container {
     position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50);
-    font-size: 1rem;
-    color: #162938;
-    font-weight: 500;
-    pointer-events: none;
-    transition: .5s;
-}
-
-.input-box input:focus~label,
-.input-box input:valid~label {
-    top: -5px;
-}
-
-.input-box input {
-    width: 100%;
+    top: 0;
+    left: 50%;
+    width: 50%;
     height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    color: #162938;
-    font-weight: 600;
-    padding: 0 35px 0 5px;
-}
- 
-.input-box .icon {
-    position: absolute;
-    right: 8px;
-    font-size: 1.2rem;
-    color: #162938;
-    line-height: 57px;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
 }
 
-.remember-forgot {
-    font-size:.9rem;
-    color: #162938;
-    font-weight: 500;
-    margin: 15px 0 15px;
-    display: flex;
-    justify-content: space-between;
+.container.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+
 }
 
-.remember-forgot label input {
-    accent-color: #162938;
-    margin-right: 3px;
-}
-
-.remember-forgot a {
-    color: #162938;
-    text-decoration: none;
-}
-
-.remember-forgot a:hover {
-    text-decoration: underline;
-}
-
-.btn {
-    width: 100%;
-    height: 45px;
-    background: var(--primary-btn-color);
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
+.toggle {
+    background-color: var(--primary-color);
+    height: 100%;
+    background: linear-gradient(to right, #18c8dfdb , #30A3E4, #87CAF0);
     color: var(--text-light);
-    font-weight: 500;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: 0.6s ease-in-out;
 }
 
-.login-register {
-    font-size:.9rem;
-    color: var(--primary-color);
+.container.active .toggle {
+    transform: translateX(50%);
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
     text-align: center;
-    font-weight: 500;
-    margin: 25px 0 10px;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
 }
 
-.login-register p a {
-    color: #162938;
-    text-decoration: none;
-    font-weight: 600;
+.toggle-left {
+    transform: translateX(-200%);
 }
 
-.login-register p a:hover {
-    text-decoration: underline;
+.container.active .toggle-left {
+    transform: translateX(0);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right {
+    transform: translateX(200%);
 }
