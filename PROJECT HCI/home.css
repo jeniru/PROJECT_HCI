@@ -469,8 +469,7 @@ header {
 
 .box-4 .btn {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 33%;
     padding: 10px 25px;
     font-size: 16px;
     font-weight: 400;
@@ -579,16 +578,16 @@ header {
   
   /*honda*/
   
-  .box-6 {
+.box-6 {
     height: 400px;
     width: 570px;
     background-color: #efefef86;
     border-radius: 20px;
     padding: 20px;
-  }
+}
   
   
-  .form-group .btn {
+.form-group .btn {
     display: flex;
     align-self: center;
     padding: 10px 25px;
@@ -598,10 +597,13 @@ header {
     border-radius: 30px;
     border: none;
     background-color: #00B3FF;
-  }
-  .form-group .btn a {
+    margin-left: 20%;
+
+}
+.form-group .btn a {
     color: white; /* Override hyperlink color */
-  }
+    text-decoration: none;
+}
 /*feedbacks*/
 
 .happy h1{
@@ -628,6 +630,7 @@ header {
     border-radius: 20px;  
     align-items: center;
     column-gap: 50px;
+    text-align: center;
 }
 
 .customer-2 {
@@ -637,11 +640,14 @@ header {
     padding: 10px;
     border-radius: 20px;  
     align-items: center;
+    text-align: center;
+
 }
 
 .customer-image{
     margin-top: 20px;
-    margin-left: 22rem;
+    display: block;
+    margin-left: 45%;
     align-items: center;
     justify-content: center;
     height: 60px;
@@ -650,22 +656,22 @@ header {
     border-radius: 50%;
 }
 .customer-01{
-    background-image: url('images/adi_1.jpeg')
+    background-image: url('images/las\ vegas.jpg')
 }
 .customer-02{
-    background-image: url('images/adi_2.jpg')
+    background-image: url('images/greece.jpg')
 }
 
-.customer h1 {
+.feedbacks_container h1 {
     font-weight: bold;
-    margin-top: 10px;
-    margin-left: 21rem;
+    margin-top: 20px;
+    /* margin-left: 21rem; */
 }
-.customer p {
-    margin-top: 18px;
+.feedbacks_container p {
+    margin-top: 20px;
     justify-content: center;
     font-weight: 300;
-    color: #ffffff81;
+    color: var(--text-grey);
     padding: 10px;
 }
 
