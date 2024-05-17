@@ -84,25 +84,25 @@
                             <input type="text" id="firstName" name="firstName" required="required">
                             <label>First Name</label>
                         </div>
-
+                    
                         <div class="inputGroup halfWidth">
                             <input type="text" id="lastName" name="lastName" required="required">
                             <label>Last Name</label>
                         </div>
-
+                    
                         <div class="inputGroup fullWidth">
                             <input type="text" id="email" name="email" required="required">
                             <label>Email</label>
                         </div>
-
+                    
                         <div class="inputGroup fullWidth">
-                            <textarea required="required" id="required"></textarea>
+                            <textarea required="required" id="message" name="message"></textarea>
                             <label>Message</label>
                         </div>
-
+                    
                         <div class="inputGroup fullWidth">
                             <center>
-                                <button>Send Message</button>
+                                <button type="button" id="sendMessageButton">Send Message</button>
                             </center>
                         </div>
                     </form>
@@ -224,6 +224,9 @@
         });
         
     </script>
+   
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="contactus.js"></script>
 
 </body>
