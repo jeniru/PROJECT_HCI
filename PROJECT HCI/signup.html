@@ -6,9 +6,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="signup.css">
- 
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
 </head>
 <body>
@@ -16,46 +14,49 @@
         <div class="form-container sign-up">
             <form>
                 <h1>Create Account</h1>
+                <a href="signup.html" class="back-button"><i class='bx bx-arrow-back'></i></a>
                 <div class="social-icons">
-                    <a href="#" class="icons" box-icon name='facebook-circle' type='logo' color='#0191f9' ></box-icon></a>
-                    <a href="#" class="icons" box-icon name='instagram-alt' type='logo' color='rgba(243,16,94,0.98)' ></box-icon>></a>
-                    <a href="#" class="icons" box-icon name='gmail' type='logo' color='#f31012' ></box-icon>></a>
-                    <a href="#" class="icons" box-icon name='linkedin-square' type='logo' color='#2501bf' ></box-icon>></a>
+                    <a href="#" class="icons"><i class='bx bxl-facebook-circle' style='color:#1b94fb' ></i></a>
+                    <a href="#" class="icons"><i class='bx bxl-instagram' style='color:#fb1bab'  ></i></box-icon></a>
+                    <a href="#" class="icons"><i class='bx bxl-gmail' style='color:#f50b0b'  ></i></box-icon></a>
+                    <a href="#" class="icons"><i class='bx bxl-linkedin-square' style='color:#0b2af5'  ></i></a>
                 </div>
-                <span>or use your email for signing up</span>
-                <input type="text" placeholder="name">
+                <span>or use your email for Registration</span>
+                <input type="text" placeholder="Name">
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Password">
-                <button>Register</button>
+                <button>Sign Up</button>
             </form>
         </div>
+
         <div class="form-container sign-in">
             <form>
                 <h1>Sign In</h1>
+                <a href="home.html" class="back-button"><i class='bx bx-arrow-back'></i></a>
                 <div class="social-icons">
-                    <a href="#" class="icons" box-icon name='facebook-circle' type='logo' color='#0191f9'></box-icon></a>
-                    <a href="#" class="icons" box-icon name='instagram-alt' type='logo' color='rgba(243,16,94,0.98)' ></box-icon></a>
-                    <a href="#" class="icons" box-icon name='gmail' type='logo' color='#f31012' ></box-icon></a>
-                    <a href="#" class="icons" box-icon name='linkedin-square' type='logo' color='#2501bf'></box-icon></a>
+                    <a href="#" class="icons"><i class='bx bxl-facebook-circle' style='color:#1b94fb' ></i></a>
+                    <a href="#" class="icons"><i class='bx bxl-instagram' style='color:#fb1bab'  ></i></box-icon></a>
+                    <a href="#" class="icons"><i class='bx bxl-gmail' style='color:#f50b0b'  ></i></box-icon></a>
+                    <a href="#" class="icons"><i class='bx bxl-linkedin-square' style='color:#0b2af5'  ></i></a>
                 </div>
                 <span>or use your email password</span>
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Password">
-                <a href="#">Forget Your Password?</a>
+                <a href="#">Forgot Your Password?</a>
                 <button>Sign In</button>
             </form>
         </div>
         <div class="toggle-container">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
-                    <h1>Welcome, Back! Ka-Wander!</h1>
-                    <p>Enter your personal details to use site features</p>
+                    <h1>Welcome Back! Ka-Wander!</h1>
+                    <p>Ready to explore more? Sign in to your account.</p>
                     <button class="hidden" id="login">Sign In</button>
                 </div>
-                <div class="toggle-panel toggle-right+">
+                <div class="toggle-panel toggle-right">
                     <h1>Hello, Ka-Wander!</h1>
-                    <p>Use your Sign In details to navigate site features</p>
-                    <button class="hidden" id="login">Sign Up</button>
+                    <p>Unlock exclusive deals and plan your perfect adventure. Create an account today!</p>
+                    <button class="hidden" id="register">Sign Up</button>
                 </div>
             </div>
         </div>
